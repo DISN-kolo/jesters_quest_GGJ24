@@ -7,7 +7,7 @@ extends CharacterBody2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var arrow_scene = preload("res://Projectile/arrow.tscn")
+@onready var arrow_scene = preload("res://Projectile/arrow.tscn")
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -35,5 +35,5 @@ func _physics_process(delta):
 func shoot():
 	var target = get_global_mouse_position()
 	var start = self.global_position
-	
+	var arrow = arrow_scene.instantiate()
 	
