@@ -36,4 +36,10 @@ func shoot():
 	var target = get_global_mouse_position()
 	var start = self.global_position
 	var arrow = arrow_scene.instantiate()
+	arrow.global_position = start
+	arrow.rotation = (target - start).angle() + PI/2
+	arrow.vel = (target - start)
+	#arrow.speed = 2000
+	#arrow.target = target
+	owner.add_child(arrow)
 	
