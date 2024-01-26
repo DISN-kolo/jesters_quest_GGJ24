@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61owc"]
 size = Vector2(2, 6)
 
-[node name="Arrow" type="RigidBody2D"]
+[node name="Arrow" type="RigidBody2D" groups=["arrow"]]
 collision_layer = 2
 collision_mask = 2
 gravity_scale = 0.369
@@ -16,7 +16,7 @@ script = ExtResource("2_l5n6w")
 [node name="ArrowSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_7p4vo")
 
-[node name="ArrowCollider" type="CollisionShape2D" parent="."]
+[node name="ArrowCollider" type="CollisionShape2D" parent="." groups=["arrow"]]
 shape = SubResource("RectangleShape2D_61owc")
 
 [node name="Timer" type="Timer" parent="."]
