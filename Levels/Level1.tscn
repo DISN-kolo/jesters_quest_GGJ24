@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgylhm6qepfxe"]
+[gd_scene load_steps=6 format=3 uid="uid://bgylhm6qepfxe"]
 
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="1_kciqf"]
+[ext_resource type="Script" path="res://Levels/Level0.gd" id="1_su2cq"]
 [ext_resource type="Texture2D" uid="uid://cm6tixmoekkpl" path="res://Levels/icon2.png" id="2_x4si5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bp8o"]
@@ -15,6 +16,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0bp8o")
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_su2cq")
 
 [node name="Player" parent="." instance=ExtResource("1_kciqf")]
 
