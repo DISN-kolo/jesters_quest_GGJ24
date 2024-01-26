@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgylhm6qepfxe"]
+
+[ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="1_kciqf"]
+[ext_resource type="Texture2D" uid="uid://ccsxbk8k4mk3m" path="res://icon2.png" id="2_x4si5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bp8o"]
+texture = ExtResource("2_x4si5")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_3xog6"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_0bp8o")
+
+[node name="Level1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_kciqf")]
+
+[node name="Tiles" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_3xog6")
+format = 2
+layer_0/name = "ground"
+layer_0/tile_data = PackedInt32Array(131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
