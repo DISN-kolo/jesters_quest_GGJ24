@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwq0ejpjod43q"]
+
+[ext_resource type="Texture2D" uid="uid://crtfuw1ciqycq" path="res://Projectile/arrow.png" id="1_7p4vo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61owc"]
+size = Vector2(2, 6)
+
+[node name="Arrow" type="Node2D"]
+
+[node name="ArrowSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_7p4vo")
+
+[node name="ArrowRBody" type="RigidBody2D" parent="."]
+
+[node name="ArrowCollider" type="CollisionShape2D" parent="ArrowRBody"]
+shape = SubResource("RectangleShape2D_61owc")
