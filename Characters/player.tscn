@@ -12,5 +12,5 @@ script = ExtResource("1_yumc7")
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_l062v")
 
-[node name="PlayerCollider" type="CollisionShape2D" parent="."]
+[node name="PlayerCollider" type="CollisionShape2D" parent="." groups=["player"]]
 shape = SubResource("RectangleShape2D_uonxl")
