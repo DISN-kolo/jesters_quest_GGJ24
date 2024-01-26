@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmpkquubl8n7u"]
+[gd_scene load_steps=8 format=3 uid="uid://cmpkquubl8n7u"]
 
-[ext_resource type="Texture2D" uid="uid://cm6tixmoekkpl" path="res://Levels/icon2.png" id="1_2m3by"]
+[ext_resource type="Texture2D" uid="uid://csoeomghf13f3" path="res://Levels/icon2.png" id="1_2m3by"]
 [ext_resource type="Script" path="res://Levels/Level0.gd" id="1_ycqfy"]
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="1_ygm86"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="3_ns637"]
+[ext_resource type="PackedScene" uid="uid://dr8rh4paoovmo" path="res://Characters/goblin.tscn" id="5_p56x7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bp8o"]
 texture = ExtResource("1_2m3by")
@@ -31,3 +32,6 @@ layer_0/tile_data = PackedInt32Array(327671, 0, 0, 327672, 0, 0, 327673, 0, 0, 3
 
 [node name="NextLevel" parent="." instance=ExtResource("3_ns637")]
 position = Vector2(129, -12)
+
+[node name="Goblin" parent="." instance=ExtResource("5_p56x7")]
+position = Vector2(-114, 47)
