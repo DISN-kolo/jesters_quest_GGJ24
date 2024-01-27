@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgnbsw2467v3l"]
+[gd_scene load_steps=6 format=3 uid="uid://bgnbsw2467v3l"]
 
 [ext_resource type="TileSet" uid="uid://p6k7chtpc7xg" path="res://Levels/tileset2.tres" id="1_v0upk"]
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="2_3gpe2"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="3_faquu"]
+[ext_resource type="PackedScene" uid="uid://cuee5tlcivfip" path="res://UI/hearts.tscn" id="5_3ayip"]
 [ext_resource type="PackedScene" uid="uid://bbeflllxqelnn" path="res://Characters/goblin_archer.tscn" id="5_adxh3"]
 
 [node name="Level3" type="Node2D"]
@@ -35,3 +36,9 @@ position = Vector2(316, -4)
 
 [node name="Goblin Archer" parent="." instance=ExtResource("5_adxh3")]
 position = Vector2(235, 16)
+
+[node name="Hearts" parent="." instance=ExtResource("5_3ayip")]
+offset_left = 244.0
+offset_top = 22.0
+offset_right = 340.0
+offset_bottom = 38.0

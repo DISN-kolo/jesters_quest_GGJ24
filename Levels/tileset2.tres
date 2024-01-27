@@ -1,14 +1,14 @@
 [gd_resource type="TileSet" load_steps=19 format=3 uid="uid://p6k7chtpc7xg"]
 
-[ext_resource type="Texture2D" uid="uid://3f2n7qt58rrk" path="res://Art Assets/Terrains and Deco/PixelSpaces Free Pack/Backgrounds/Cloud_small_3.png" id="1_ihaqn"]
-[ext_resource type="Texture2D" uid="uid://ccaclcbn0php3" path="res://Art Assets/Terrains and Deco/PixelSpaces Free Pack/Backgrounds/Cloud_1.png" id="2_ag5u3"]
-[ext_resource type="Texture2D" uid="uid://c3ybeuu82748w" path="res://Art Assets/Terrains and Deco/PixelSpaces Free Pack/Backgrounds/Mountain_large_1.png" id="3_1euc3"]
-[ext_resource type="Texture2D" uid="uid://b0b4feuwa66hq" path="res://Art Assets/Terrains and Deco/Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="4_s2tpt"]
-[ext_resource type="Texture2D" uid="uid://dg54abrnnginn" path="res://Art Assets/Terrains and Deco/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="5_t1cjk"]
-[ext_resource type="Texture2D" uid="uid://cmnn8xbh04jss" path="res://Art Assets/Terrains and Deco/Treasure Hunters/Merchant Ship/Sprites/Box/Idle/1.png" id="6_suqrj"]
-[ext_resource type="Texture2D" uid="uid://cflnfjknm1nwy" path="res://Art Assets/Terrains and Deco/Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Water.png" id="7_fywhp"]
-[ext_resource type="Texture2D" uid="uid://d2xk6o58mniq7" path="res://Art Assets/Terrains and Deco/Treasure Hunters/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" id="7_xxj4p"]
-[ext_resource type="Texture2D" uid="uid://dhmgu6jss8yhq" path="res://Art Assets/Terrains and Deco/Kings and Pigs/Sprites/Terrain (32x32).png" id="8_qhj4u"]
+[ext_resource type="Texture2D" uid="uid://cvhayjfcaqrfq" path="res://Art Assets/Terrains and Deco/PixelSpaces Free Pack/Backgrounds/Cloud_small_3.png" id="1_ihaqn"]
+[ext_resource type="Texture2D" uid="uid://774nmcqw7gpq" path="res://Art Assets/Terrains and Deco/PixelSpaces Free Pack/Backgrounds/Cloud_1.png" id="2_ag5u3"]
+[ext_resource type="Texture2D" uid="uid://dn6j5e4tjekgq" path="res://Art Assets/Terrains and Deco/PixelSpaces Free Pack/Backgrounds/Mountain_large_1.png" id="3_1euc3"]
+[ext_resource type="Texture2D" uid="uid://cqxxvsdcnoa4q" path="res://Art Assets/Terrains and Deco/Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="4_s2tpt"]
+[ext_resource type="Texture2D" uid="uid://bu42gmmon7b7u" path="res://Art Assets/Terrains and Deco/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="5_t1cjk"]
+[ext_resource type="Texture2D" uid="uid://cgu6po25sk4er" path="res://Art Assets/Terrains and Deco/Treasure Hunters/Merchant Ship/Sprites/Box/Idle/1.png" id="6_suqrj"]
+[ext_resource type="Texture2D" uid="uid://dkbr7kf2138wr" path="res://Art Assets/Terrains and Deco/Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Water.png" id="7_fywhp"]
+[ext_resource type="Texture2D" uid="uid://bp5cld3o2g5kh" path="res://Art Assets/Terrains and Deco/Treasure Hunters/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" id="7_xxj4p"]
+[ext_resource type="Texture2D" uid="uid://36i5k4c5mgdj" path="res://Art Assets/Terrains and Deco/Kings and Pigs/Sprites/Terrain (32x32).png" id="8_qhj4u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkfyh"]
 texture = ExtResource("1_ihaqn")

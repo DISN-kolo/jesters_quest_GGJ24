@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuee5tlcivfip"]
+
+[ext_resource type="Texture2D" uid="uid://bjrxxo4mxwj5n" path="res://Art Assets/Item Sprites/heart.png" id="1_8mvb6"]
+[ext_resource type="Script" path="res://UI/hearts.gd" id="1_lty6d"]
+
+[node name="Hearts" type="HBoxContainer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("1_lty6d")
+
+[node name="1" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_8mvb6")
+
+[node name="2" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_8mvb6")
+
+[node name="3" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_8mvb6")
+
+[node name="4" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_8mvb6")
+
+[node name="5" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_8mvb6")
