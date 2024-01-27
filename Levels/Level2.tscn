@@ -1,16 +1,17 @@
-[gd_scene load_steps=21 format=3 uid="uid://bhmxcl28bbkj1"]
+[gd_scene load_steps=22 format=3 uid="uid://dylfnthiilhv3"]
 
 [ext_resource type="Script" path="res://Levels/Level0.gd" id="1_0awb7"]
-[ext_resource type="Texture2D" uid="uid://c5t1n0g0gd3r7" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Cloud_small_3.png" id="1_bkrny"]
-[ext_resource type="Texture2D" uid="uid://eb6fsa0xlkec" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_etl00"]
-[ext_resource type="Texture2D" uid="uid://rb3biixn7vx5" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Cloud_1.png" id="2_dqtok"]
-[ext_resource type="Texture2D" uid="uid://vfdwvo0kptl3" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="2_n4vo4"]
-[ext_resource type="Texture2D" uid="uid://b4hijiy13p7x2" path="res://Art Assets/Kings and Pigs/Sprites/Terrain (32x32).png" id="2_u8cyi"]
-[ext_resource type="Texture2D" uid="uid://cd4nxh1v7a5pe" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Mountain_large_1.png" id="3_6rtrl"]
-[ext_resource type="Texture2D" uid="uid://doqwc6u842m1r" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" id="3_td6bq"]
+[ext_resource type="Texture2D" uid="uid://35ojaqf4gfra" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Cloud_small_3.png" id="1_bkrny"]
+[ext_resource type="Texture2D" uid="uid://mwd8ab33qkpq" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_etl00"]
+[ext_resource type="Texture2D" uid="uid://bartm1xrvk5el" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Cloud_1.png" id="2_dqtok"]
+[ext_resource type="Texture2D" uid="uid://bw312pn2nj3pk" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="2_n4vo4"]
+[ext_resource type="Texture2D" uid="uid://d1l7ig0uaioex" path="res://Art Assets/Kings and Pigs/Sprites/Terrain (32x32).png" id="2_u8cyi"]
+[ext_resource type="Texture2D" uid="uid://bl5340u8lwt6i" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Mountain_large_1.png" id="3_6rtrl"]
+[ext_resource type="Texture2D" uid="uid://isorn2acgdxu" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" id="3_td6bq"]
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="4_2u6d2"]
-[ext_resource type="Texture2D" uid="uid://l1q18ggidri4" path="res://Art Assets/Treasure Hunters/Merchant Ship/Sprites/Box/Idle/1.png" id="6_8hflh"]
+[ext_resource type="Texture2D" uid="uid://eq8s8ks8p3ts" path="res://Art Assets/Treasure Hunters/Merchant Ship/Sprites/Box/Idle/1.png" id="6_8hflh"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="6_8m8ys"]
+[ext_resource type="PackedScene" uid="uid://dr8rh4paoovmo" path="res://Characters/goblin.tscn" id="12_vstns"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkfyh"]
 texture = ExtResource("1_bkrny")
@@ -2651,9 +2652,11 @@ position = Vector2(-40, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(40, -72)
-zoom = Vector2(0.8, 0.8)
 process_callback = 0
 position_smoothing_enabled = true
 
 [node name="NextLevel" parent="." instance=ExtResource("6_8m8ys")]
 position = Vector2(154, -9)
+
+[node name="Goblin" parent="." instance=ExtResource("12_vstns")]
+position = Vector2(118, -3)
