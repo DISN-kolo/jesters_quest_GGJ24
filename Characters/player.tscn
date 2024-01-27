@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://tnn3emhw52bi"]
 
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_yumc7"]
-[ext_resource type="Texture2D" uid="uid://ca0wrldp8teaj" path="res://Art Assets/character sprite/main character/Main No Hat Fixed.png" id="2_m46m7"]
+[ext_resource type="Texture2D" uid="uid://ho8ta30cdnnw" path="res://Art Assets/character sprite/main character/Main No Hat Fixed.png" id="2_m46m7"]
 [ext_resource type="Script" path="res://Characters/playersprite.gd" id="4_o25jl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uonxl"]
@@ -71,10 +71,11 @@ size = Vector2(12, 26)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_yumc7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2.84217e-14, -2.84217e-14)
+position = Vector2(2.84217e-14, 0)
 scale = Vector2(1.77381, 1.67857)
 texture = ExtResource("2_m46m7")
 offset = Vector2(4, -4)
@@ -95,15 +96,11 @@ autoplay = "main char"
 speed_scale = 2.0
 
 [node name="playehitarea" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 12
+collision_layer = 8
+collision_mask = 8
 
 [node name="playerhitbox" type="CollisionShape2D" parent="playehitarea"]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_djekc")
 
-[node name="Timer" type="Timer" parent="."]
-
-[connection signal="area_entered" from="playehitarea" to="." method="_on_playehitarea_area_entered"]
 [connection signal="body_entered" from="playehitarea" to="." method="_on_playehitarea_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
