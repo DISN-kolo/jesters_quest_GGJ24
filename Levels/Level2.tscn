@@ -4,6 +4,7 @@
 [ext_resource type="TileSet" uid="uid://p6k7chtpc7xg" path="res://Levels/tileset2.tres" id="2_o1ny4"]
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="4_2u6d2"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="6_8m8ys"]
+[ext_resource type="PackedScene" uid="uid://dr8rh4paoovmo" path="res://Characters/goblin.tscn" id="12_vstns"]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_0awb7")
@@ -27,9 +28,11 @@ position = Vector2(-40, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(40, -72)
-zoom = Vector2(0.8, 0.8)
 process_callback = 0
 position_smoothing_enabled = true
 
 [node name="NextLevel" parent="." instance=ExtResource("6_8m8ys")]
 position = Vector2(154, -9)
+
+[node name="Goblin" parent="." instance=ExtResource("12_vstns")]
+position = Vector2(118, -3)
