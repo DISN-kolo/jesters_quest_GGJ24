@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://tnn3emhw52bi"]
 
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_yumc7"]
-[ext_resource type="Texture2D" uid="uid://c6leylk8s4bfo" path="res://Art Assets/character sprite/main character/Main No Hat Fixed.png" id="2_m46m7"]
+[ext_resource type="Texture2D" uid="uid://ho8ta30cdnnw" path="res://Art Assets/character sprite/main character/Main No Hat Fixed.png" id="2_m46m7"]
 [ext_resource type="Script" path="res://Characters/playersprite.gd" id="4_o25jl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uonxl"]
