@@ -26,7 +26,6 @@ window/size/viewport_height=1080
 window/size/initial_position_type=2
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
-window/stretch/scale=4.0
 mouse_cursor/size/viewport_width=1640
 mouse_cursor/size/viewport_height=1060
 mouse_cursor/root_node_layout_direction=1
