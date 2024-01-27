@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://bxt3w6ijwrnjc"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cojv2pc2rhli0"]
 
 [ext_resource type="Texture2D" uid="uid://d2ymmixilpytk" path="res://Levels/icon2.png" id="1_m3x8r"]
 [ext_resource type="Texture2D" uid="uid://dmmv0oomgro5o" path="res://Art Assets/Terrains and Deco/Kings and Pigs/Sprites/Terrain (32x32).png" id="2_rt3u2"]
@@ -1481,6 +1481,7 @@ texture = ExtResource("3_cpvjp")
 
 [resource]
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_0bp8o")
 sources/1 = SubResource("TileSetAtlasSource_vrqyv")
 sources/2 = SubResource("TileSetAtlasSource_oya67")
