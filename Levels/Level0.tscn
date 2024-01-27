@@ -9,7 +9,7 @@
 [node name="Level0" type="Node2D"]
 
 [node name="Player2" parent="." instance=ExtResource("1_7ywxs")]
-position = Vector2(-184, 62)
+position = Vector2(-184, 65)
 slide_on_ceiling = false
 
 [node name="Camera2D2" type="Camera2D" parent="."]
@@ -41,4 +41,4 @@ position = Vector2(208, 8)
 position = Vector2(32, -32)
 scale = Vector2(0.219012, 0.217355)
 texture = ExtResource("5_ndhws")
-offset = Vector2(0, 20.49)
+offset = Vector2(0, 20)
