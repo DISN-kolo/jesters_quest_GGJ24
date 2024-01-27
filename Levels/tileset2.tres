@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=19 format=3 uid="uid://p6k7chtpc7xg"]
+[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://cq6h7uldghhxa"]
 
 [ext_resource type="Texture2D" uid="uid://b6a2pcj1rf40v" path="res://Art Assets/Terrains and Deco/PixelSpaces Free Pack/Backgrounds/Cloud_small_3.png" id="1_ihaqn"]
 [ext_resource type="Texture2D" uid="uid://c6ak5vuyuhsx7" path="res://Art Assets/Terrains and Deco/PixelSpaces Free Pack/Backgrounds/Cloud_1.png" id="2_ag5u3"]
@@ -2636,7 +2636,8 @@ texture = ExtResource("8_qhj4u")
 35:23/0/physics_layer_0/angular_velocity = 0.0
 
 [resource]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
 sources/3 = SubResource("TileSetAtlasSource_1uohe")
 sources/4 = SubResource("TileSetAtlasSource_issx5")
 sources/7 = SubResource("TileSetAtlasSource_ia2m1")

@@ -5,11 +5,14 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY = -400.0
 
 @export var down_vel_max = 400.0
+
+@export var SHOOT_CD = 0.1
+var shoot_cd = SHOOT_CD
 																				#Brian added some code
 @onready var animation = $AnimationPlayer
 @onready var sprite = $Sprite2D
 
-var _facing_direction := 1
+var _facing_direction := -1
 var _was_moving := false
 																				#Brian added until here
 
@@ -56,8 +59,14 @@ func _physics_process(delta):
 		sprite.flip_h = (_facing_direction < 0)
 																				#this is the end, Brian's promise
 	# Handle SHOOT >:)
-	if Input.is_action_just_pressed("LMB"):
-		shoot()
+	if Input.is_action_pressed("LMB"):
+		if shoot_cd <= 0:
+			shoot_cd = SHOOT_CD
+			shoot()
+		else:
+			shoot_cd -= delta
+	else:
+		shoot_cd = 0
 	move_and_slide()
 
 func shoot():
@@ -77,8 +86,9 @@ func shoot():
 
 
 func _on_playehitarea_body_entered(body):
-	body.queue_free()
+	print("CHARACTER HIT with: ", body)
 	if body.is_in_group("enemy_arrow"):
+		body.queue_free()
 		print("enem_arrow in player")
 		Stats.player_hp -= 1
 		print(Stats.player_hp)

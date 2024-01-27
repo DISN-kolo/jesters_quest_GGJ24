@@ -9,7 +9,7 @@
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_0awb7")
 
-[node name="Tiles" type="TileMap" parent="."]
+[node name="Tiles" type="TileMap" parent="." groups=["tiles"]]
 tile_set = ExtResource("2_o1ny4")
 format = 2
 layer_0/name = "ground"
@@ -35,4 +35,4 @@ position_smoothing_enabled = true
 position = Vector2(154, -9)
 
 [node name="Goblin" parent="." instance=ExtResource("12_vstns")]
-position = Vector2(118, -3)
+position = Vector2(99, -59)

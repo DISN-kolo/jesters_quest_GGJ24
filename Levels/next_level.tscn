@@ -5,6 +5,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_pm5ag"]
 
 [node name="NextLevel" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_x0qm1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
