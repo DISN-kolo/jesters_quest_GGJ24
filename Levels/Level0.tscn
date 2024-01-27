@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cmpkquubl8n7u"]
+[gd_scene load_steps=15 format=3 uid="uid://cmpkquubl8n7u"]
 
 [ext_resource type="Texture2D" uid="uid://d2ymmixilpytk" path="res://Levels/icon2.png" id="1_2m3by"]
 [ext_resource type="Script" path="res://Levels/Level0.gd" id="1_ycqfy"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://c8chxcb6tppk8" path="res://Art Assets/Kings and Pigs/Sprites/Decorations (32x32).png" id="4_twjth"]
 [ext_resource type="Texture2D" uid="uid://c5q16k60x0er8" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="5_5wbb0"]
 [ext_resource type="Texture2D" uid="uid://caen2brqejf4x" path="res://Art Assets/Treasure Hunters/Merchant Ship/Sprites/Chest/Idle/1.png" id="6_tb7gv"]
-[ext_resource type="Script" path="res://Levels/Sprite2D.gd" id="8_8b3ri"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bp8o"]
 texture = ExtResource("1_2m3by")
@@ -2015,48 +2014,6 @@ sources/2 = SubResource("TileSetAtlasSource_b3taj")
 sources/3 = SubResource("TileSetAtlasSource_u7tyn")
 sources/4 = SubResource("TileSetAtlasSource_188fd")
 
-[sub_resource type="Animation" id="Animation_kvsdb"]
-length = 0.001
-
-[sub_resource type="Animation" id="Animation_efkrf"]
-resource_name = "main char"
-length = 1.18
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame_coords")
-tracks/0/interp = 2
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(-0.1, 0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0), Vector2i(6, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_05a65"]
-resource_name = "right"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame_coords")
-tracks/0/interp = 2
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(-0.1, 0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0), Vector2i(6, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6nhsd"]
-_data = {
-"RESET": SubResource("Animation_kvsdb"),
-"main char": SubResource("Animation_efkrf"),
-"right": SubResource("Animation_05a65")
-}
-
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_ycqfy")
 
@@ -2070,20 +2027,6 @@ layer_1/tile_data = PackedInt32Array(131071, 393218, 7, 4, 327682, 6, 65540, 327
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_ygm86")]
 position = Vector2(23, 47)
-
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="CharacterBody2D"]
-root_node = NodePath("../Sprite2D")
-libraries = {
-"": SubResource("AnimationLibrary_6nhsd")
-}
-autoplay = "main char"
-
-[node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(57, -34)
-scale = Vector2(1.77381, 1.67857)
-hframes = 8
-frame = 1
-script = ExtResource("8_8b3ri")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

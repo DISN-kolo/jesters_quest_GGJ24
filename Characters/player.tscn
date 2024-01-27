@@ -1,12 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://tnn3emhw52bi"]
+[gd_scene load_steps=9 format=3 uid="uid://tnn3emhw52bi"]
 
-[ext_resource type="Texture2D" uid="uid://de720ldia31c" path="res://Characters/dude.png" id="1_l062v"]
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_yumc7"]
-[ext_resource type="Texture2D" uid="uid://crc8n7codwxsk" path="res://Art Assets/character sprite/main character/pixil-frame-0(1).png" id="3_dubus"]
+[ext_resource type="Texture2D" uid="uid://ho8ta30cdnnw" path="res://Art Assets/character sprite/main character/Main No Hat Fixed.png" id="2_m46m7"]
 [ext_resource type="Script" path="res://Levels/Sprite2D.gd" id="4_o25jl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uonxl"]
-size = Vector2(16, 32)
+size = Vector2(21, 32)
 
 [sub_resource type="Animation" id="Animation_kvsdb"]
 length = 0.001
@@ -53,12 +52,16 @@ _data = {
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_yumc7")
 
-[node name="PlayerSprite" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("1_l062v")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7, -5)
+scale = Vector2(1.77381, 1.67857)
+texture = ExtResource("2_m46m7")
+hframes = 8
+frame = 4
+script = ExtResource("4_o25jl")
 
 [node name="PlayerCollider" type="CollisionShape2D" parent="." groups=["player"]]
-position = Vector2(0, 1)
+position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_uonxl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -67,11 +70,3 @@ libraries = {
 "": SubResource("AnimationLibrary_6nhsd")
 }
 autoplay = "main char"
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(7, -5)
-scale = Vector2(1.77381, 1.67857)
-texture = ExtResource("3_dubus")
-hframes = 8
-frame = 1
-script = ExtResource("4_o25jl")
