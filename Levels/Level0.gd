@@ -1,15 +1,12 @@
 extends Node2D
 
-var cursor = load("res://Art Assets/crosshair.png")
+@onready var player = $Player
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	Input.set_custom_mouse_cursor(cursor)
-	pass # Replace with function body.
+	player.SPEED = 0
+	player.JUMP_VELOCITY = 0
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().quit()
-	pass
+func _on_text_box_dialog_end():
+	player.SPEED = 180
+	player.JUMP_VELOCITY = -400
