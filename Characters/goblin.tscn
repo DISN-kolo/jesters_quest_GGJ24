@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dr8rh4paoovmo"]
 
-[ext_resource type="Texture2D" uid="uid://bhsue26s1vwoy" path="res://Characters/dude.png" id="1_16bs1"]
+[ext_resource type="Texture2D" uid="uid://cii3vc7e0yl64" path="res://Characters/dude.png" id="1_16bs1"]
 [ext_resource type="Script" path="res://Characters/goblin.gd" id="1_xx3yk"]
 [ext_resource type="PackedScene" uid="uid://b8l6bano6y1n1" path="res://Shared/hurt_box.tscn" id="3_sr2fc"]
 
