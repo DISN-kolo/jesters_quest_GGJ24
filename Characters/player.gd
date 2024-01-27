@@ -86,8 +86,9 @@ func shoot():
 
 
 func _on_playehitarea_body_entered(body):
-	body.queue_free()
+	print("CHARACTER HIT")
 	if body.is_in_group("enemy_arrow"):
+		body.queue_free()
 		print("enem_arrow in player")
 		Stats.player_hp -= 1
 		print(Stats.player_hp)
