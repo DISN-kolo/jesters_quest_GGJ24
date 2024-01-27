@@ -7,8 +7,7 @@
 size = Vector2(5, 6.75)
 
 [node name="GoblinArrow" type="RigidBody2D" groups=["enemy_arrow"]]
-collision_layer = 8
-collision_mask = 5
+collision_layer = 16
 gravity_scale = 0.2
 continuous_cd = 2
 max_contacts_reported = 200
