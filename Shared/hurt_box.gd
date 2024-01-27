@@ -17,8 +17,8 @@ var invincible: bool = false :
 
 func createHitEffect():
 	var hitEffect = HitEffect.instantiate()
-	get_parent().add_child(hitEffect)
 	hitEffect.global_position = global_position
+	get_parent().add_child(hitEffect)
 
 func startInvinvibility(duration):
 	self.invincible = true

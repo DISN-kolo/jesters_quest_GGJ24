@@ -12,8 +12,8 @@ var DeathEffect = preload("res://Effects/enemy_death_effect.tscn")
 func createDeathEffect():
 	var deathEffect = DeathEffect.instantiate()
 	
-	get_parent().add_child(deathEffect)
 	deathEffect.global_position = global_position
+	get_parent().add_child(deathEffect)
 
 func _on_hurt_box_body_entered(body):
 	if (body.is_in_group("player")):
