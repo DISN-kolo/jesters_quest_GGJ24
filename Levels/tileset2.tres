@@ -1,13 +1,14 @@
-[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://p6k7chtpc7xg"]
+[gd_resource type="TileSet" load_steps=19 format=3 uid="uid://p6k7chtpc7xg"]
 
-[ext_resource type="Texture2D" uid="uid://c5t1n0g0gd3r7" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Cloud_small_3.png" id="1_ihaqn"]
-[ext_resource type="Texture2D" uid="uid://rb3biixn7vx5" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Cloud_1.png" id="2_ag5u3"]
-[ext_resource type="Texture2D" uid="uid://cd4nxh1v7a5pe" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Mountain_large_1.png" id="3_1euc3"]
-[ext_resource type="Texture2D" uid="uid://eb6fsa0xlkec" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="4_s2tpt"]
-[ext_resource type="Texture2D" uid="uid://vfdwvo0kptl3" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="5_t1cjk"]
-[ext_resource type="Texture2D" uid="uid://l1q18ggidri4" path="res://Art Assets/Treasure Hunters/Merchant Ship/Sprites/Box/Idle/1.png" id="6_suqrj"]
-[ext_resource type="Texture2D" uid="uid://doqwc6u842m1r" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" id="7_xxj4p"]
-[ext_resource type="Texture2D" uid="uid://b4hijiy13p7x2" path="res://Art Assets/Kings and Pigs/Sprites/Terrain (32x32).png" id="8_qhj4u"]
+[ext_resource type="Texture2D" uid="uid://b6a2pcj1rf40v" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Cloud_small_3.png" id="1_ihaqn"]
+[ext_resource type="Texture2D" uid="uid://c6ak5vuyuhsx7" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Cloud_1.png" id="2_ag5u3"]
+[ext_resource type="Texture2D" uid="uid://c1rn2x5b1le88" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Mountain_large_1.png" id="3_1euc3"]
+[ext_resource type="Texture2D" uid="uid://b8xd0exwrjhdq" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="4_s2tpt"]
+[ext_resource type="Texture2D" uid="uid://c5q16k60x0er8" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="5_t1cjk"]
+[ext_resource type="Texture2D" uid="uid://c7kcd4x2w7tu" path="res://Art Assets/Treasure Hunters/Merchant Ship/Sprites/Box/Idle/1.png" id="6_suqrj"]
+[ext_resource type="Texture2D" uid="uid://dpxoojx15y8a1" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Water.png" id="7_fywhp"]
+[ext_resource type="Texture2D" uid="uid://cemnef5ndadyj" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" id="7_xxj4p"]
+[ext_resource type="Texture2D" uid="uid://dmmv0oomgro5o" path="res://Art Assets/Kings and Pigs/Sprites/Terrain (32x32).png" id="8_qhj4u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkfyh"]
 texture = ExtResource("1_ihaqn")
@@ -1409,6 +1410,25 @@ texture_region_size = Vector2i(25, 18)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dqkgl"]
+texture = ExtResource("7_fywhp")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ia2m1"]
 texture = ExtResource("7_xxj4p")
 0:0/0 = 0
@@ -2625,3 +2645,4 @@ sources/0 = SubResource("TileSetAtlasSource_pkfyh")
 sources/1 = SubResource("TileSetAtlasSource_qslg3")
 sources/2 = SubResource("TileSetAtlasSource_akb52")
 sources/5 = SubResource("TileSetAtlasSource_0er2b")
+sources/6 = SubResource("TileSetAtlasSource_dqkgl")
