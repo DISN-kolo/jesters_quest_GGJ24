@@ -2,10 +2,11 @@ extends RigidBody2D
 
 var vel = Vector2(0, 1)
 @export var speed = 600.0
+var sprite = "res://Art Assets/ball_red.png"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	$ArrowSprite.texture = load(sprite)
 	pass # Replace with function body.
 
 
