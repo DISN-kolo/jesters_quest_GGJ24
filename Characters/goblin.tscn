@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://dr8rh4paoovmo"]
 
 [ext_resource type="Script" path="res://Characters/goblin.gd" id="1_xx3yk"]
-[ext_resource type="Texture2D" uid="uid://gu36ldk8x37" path="res://Art Assets/character sprite/Enemy sprites/Goblin Fixed.png" id="2_drdw1"]
+[ext_resource type="Texture2D" uid="uid://mkds2qd1ba0q" path="res://Art Assets/character sprite/Enemy sprites/Goblin Fixed.png" id="2_drdw1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jhc6n"]
 atlas = ExtResource("2_drdw1")
@@ -91,7 +91,6 @@ radius = 82.0061
 
 [node name="Goblin" type="CharacterBody2D"]
 collision_layer = 4
-collision_mask = 11
 script = ExtResource("1_xx3yk")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
@@ -107,7 +106,7 @@ shape = SubResource("RectangleShape2D_u45bw")
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
 collision_layer = 4
-collision_mask = 10
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(2, -9)
@@ -115,7 +114,7 @@ shape = SubResource("CapsuleShape2D_q57vo")
 
 [node name="DetectionArea" type="Area2D" parent="."]
 visible = false
-collision_layer = 4
+collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
