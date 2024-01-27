@@ -102,10 +102,10 @@ func take_damage():
 		createHitEffect()
 
 func _on_playehitarea_body_entered(body):
-	print(body, " hit player")
 	if body.is_in_group("enemy_arrow"):
+		print("_on_playehitarea_body_entered(ENEMY ARROW)")
 		body.queue_free()
-		take_damage()
+	take_damage()
 
 func _on_playehitarea_area_entered(area):
 	take_damage()
