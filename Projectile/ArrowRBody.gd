@@ -12,10 +12,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if speed > 0:
-		speed -= delta
+		speed -= delta*200
+	else:
+		speed = 0
 	
 	
 	move_and_collide(vel.normalized() * delta * speed)
+	
 	pass
 
 

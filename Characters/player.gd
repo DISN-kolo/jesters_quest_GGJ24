@@ -65,7 +65,8 @@ func _physics_process(delta):
 
 func shoot():
 	var target = get_global_mouse_position()
-	var start = self.global_position
+	var start = self.global_position - Vector2(_facing_direction*10, 0) - Vector2(8, 0) # I HAVE NO IDEA WHY DID IT OFFSET TO THE RIGHT
+	print(start)
 	var arrow = arrow_scene.instantiate()
 	arrow.global_position = start
 	arrow.rotation = (target - start).angle() + PI/2
