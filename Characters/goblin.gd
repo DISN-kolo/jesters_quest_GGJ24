@@ -30,12 +30,12 @@ func _physics_process(delta):
 
 func createHitEffect():
 	var hitEffect = HitEffect.instantiate()
-	hitEffect.global_position = global_position
+	hitEffect.global_position = global_position - Vector2(0, 8)
 	get_parent().add_child(hitEffect)
 	
 func createDeathEffect():
 	var deathEffect = DeathEffect.instantiate()
-	deathEffect.global_position = global_position
+	deathEffect.global_position = global_position - Vector2(0, 16)
 	get_parent().add_child(deathEffect)
 
 func _on_area_2d_body_entered(body):
