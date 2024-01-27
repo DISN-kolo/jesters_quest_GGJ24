@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bhmxcl28bbkj1"]
 
 [ext_resource type="Script" path="res://Levels/Level0.gd" id="1_0awb7"]
-[ext_resource type="TileSet" uid="uid://cq6h7uldghhxa" path="res://Levels/tileset2.tres" id="2_o1ny4"]
+[ext_resource type="TileSet" uid="uid://p6k7chtpc7xg" path="res://Levels/tileset2.tres" id="2_o1ny4"]
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="4_2u6d2"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="6_8m8ys"]
 [ext_resource type="PackedScene" uid="uid://dr8rh4paoovmo" path="res://Characters/goblin.tscn" id="12_vstns"]
