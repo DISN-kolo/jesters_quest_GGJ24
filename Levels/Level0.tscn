@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://ort5p01rvte1"]
+[gd_scene load_steps=7 format=3 uid="uid://ort5p01rvte1"]
 
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="1_7ywxs"]
+[ext_resource type="Script" path="res://Levels/Level0.gd" id="1_n2cb4"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="2_ir4to"]
 [ext_resource type="TileSet" uid="uid://bxt3w6ijwrnjc" path="res://Levels/tileset1.tres" id="3_l3vuf"]
 [ext_resource type="PackedScene" uid="uid://cqn3uljww6abv" path="res://Objects/Torch.tscn" id="4_ssn0i"]
-[ext_resource type="Texture2D" uid="uid://c4ms88unpipq5" path="res://Art Assets/Terrains and Deco/Throne.png" id="5_ndhws"]
+[ext_resource type="Texture2D" uid="uid://dcckmnbvvsqvr" path="res://Art Assets/Terrains and Deco/Throne.png" id="5_ndhws"]
 
 [node name="Level0" type="Node2D"]
+script = ExtResource("1_n2cb4")
 
 [node name="Player2" parent="." instance=ExtResource("1_7ywxs")]
 position = Vector2(-184, 62)
