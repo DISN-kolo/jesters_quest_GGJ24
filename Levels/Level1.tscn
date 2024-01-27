@@ -1,13 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgylhm6qepfxe"]
+[gd_scene load_steps=4 format=3 uid="uid://bgylhm6qepfxe"]
 
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="1_kciqf"]
-[ext_resource type="Script" path="res://Levels/Level0.gd" id="1_su2cq"]
 [ext_resource type="TileSet" uid="uid://bxt3w6ijwrnjc" path="res://Levels/tileset1.tres" id="2_dd0m7"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="6_wxixb"]
 
 [node name="Level1" type="Node2D"]
 position = Vector2(8, 2)
-script = ExtResource("1_su2cq")
 
 [node name="Tiles2" type="TileMap" parent="." groups=["tiles"]]
 tile_set = ExtResource("2_dd0m7")

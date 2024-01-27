@@ -28,7 +28,7 @@ var random = RandomNumberGenerator.new()
 var arrows = ["res://Art Assets/ball_red.png", "res://Art Assets/ball_blue.png",
 "res://Art Assets/ball_green.png", "res://Art Assets/ball_yellow.png"]
 
-func _physics_process(delta):	
+func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		velocity.y = min(velocity.y, down_vel_max)
