@@ -79,9 +79,10 @@ func shoot():
 	owner.add_child(arrow)
 
 func createHitEffect():
-	var hitEffect = HitEffect.instantiate()
-	hitEffect.global_position = global_position
-	get_parent().add_child(hitEffect)
+	if sprite.visible:
+		var hitEffect = HitEffect.instantiate()
+		hitEffect.global_position = global_position
+		get_parent().add_child(hitEffect)
 	
 func createDeathEffect():
 	var deathEffect = DeathEffect.instantiate()
