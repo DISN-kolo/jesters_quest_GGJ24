@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dr8rh4paoovmo"]
 
 [ext_resource type="Script" path="res://Characters/goblin.gd" id="1_xx3yk"]
-[ext_resource type="Texture2D" uid="uid://bhsue26s1vwoy" path="res://Characters/dude.png" id="2_tgymr"]
+[ext_resource type="Texture2D" uid="uid://cii3vc7e0yl64" path="res://Characters/dude.png" id="2_tgymr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o7cxp"]
 radius = 7.0
