@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var vel = Vector2(0, 1)
-@export var speed = 600.0
+@export var speed = 300.0
 var sprite = "res://Art Assets/ball_red.png"
 var pos_prev : Vector2
 
@@ -19,7 +19,7 @@ func _physics_process(delta):
 	
 	pos_prev = global_position
 	move_and_collide(vel.normalized() * delta * speed)
-	if (pos_prev - global_position).length() < 7:
+	if (pos_prev - global_position).length() < 2:
 		slow_killer(0.2)
 
 
