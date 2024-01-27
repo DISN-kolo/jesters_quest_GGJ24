@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cnl4rkiym6yvx"]
 
 [ext_resource type="Texture2D" uid="uid://c8eb6wjoei4js" path="res://Effects/HitEffect.png" id="1_digvt"]
-[ext_resource type="Script" path="res://Effects/hit_effect.gd" id="2_4mghr"]
+[ext_resource type="Script" path="res://Effects/effect.gd" id="2_xprla"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5fesj"]
 atlas = ExtResource("1_digvt")
@@ -27,6 +27,6 @@ animations = [{
 
 [node name="HitEffect" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_2ko10")
-script = ExtResource("2_4mghr")
+script = ExtResource("2_xprla")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
