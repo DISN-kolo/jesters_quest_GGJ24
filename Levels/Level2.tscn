@@ -7,6 +7,11 @@
 
 [node name="Level2" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(40, -72)
+process_callback = 0
+position_smoothing_enabled = true
+
 [node name="Tiles" type="TileMap" parent="." groups=["tiles"]]
 tile_set = ExtResource("2_o1ny4")
 format = 2
@@ -23,11 +28,6 @@ layer_3/tile_data = PackedInt32Array(-589831, 458755, 6, -524295, 458755, 7, -58
 
 [node name="Player" parent="." instance=ExtResource("4_2u6d2")]
 position = Vector2(-168, 31)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(40, -72)
-process_callback = 0
-position_smoothing_enabled = true
 
 [node name="NextLevel" parent="." instance=ExtResource("6_8m8ys")]
 position = Vector2(272, 24)

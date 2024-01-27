@@ -71,7 +71,7 @@ func _on_detection_area_body_entered(body):
 	#var arrowsprite = arrows[random.randi_range(0, 3)]
 	#var target = get_global_mouse_position()
 	#var start = self.global_position - Vector2(_facing_direction*10, 0) - Vector2(10, 0) # I HAVE NO IDEA WHY DID IT OFFSET TO THE RIGHT
-	#print(start)
+	#t(start)
 	#var arrow = arrow_scene.instantiate()
 	#arrow.sprite = arrowsprite
 	#arrow.global_position = start
