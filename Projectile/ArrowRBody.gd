@@ -26,3 +26,13 @@ func _physics_process(delta):
 func _on_timer_timeout():
 	queue_free()
 	pass # Replace with function body.
+
+
+func _on_body_entered(body):
+	print(body)
+	if body.is_in_group("tiles"):
+		var tween = get_tree().create_tween()
+		tween.tween_property($ArrowSprite, "modulate", Color(1, 1, 1, 0), 1)
+		tween.tween_callback(func(): self.queue_free())
+		#tween.kill()
+	pass # Replace with function body.

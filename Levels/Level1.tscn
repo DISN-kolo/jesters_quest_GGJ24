@@ -9,7 +9,7 @@
 position = Vector2(8, 2)
 script = ExtResource("1_su2cq")
 
-[node name="Tiles2" type="TileMap" parent="."]
+[node name="Tiles2" type="TileMap" parent="." groups=["tiles"]]
 tile_set = ExtResource("2_dd0m7")
 format = 2
 layer_0/name = "ground"
