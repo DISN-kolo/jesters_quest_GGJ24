@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_yumc7"]
 [ext_resource type="Texture2D" uid="uid://ca0wrldp8teaj" path="res://Art Assets/character sprite/main character/Main No Hat Fixed.png" id="2_m46m7"]
-[ext_resource type="Script" path="res://Levels/Sprite2D.gd" id="4_o25jl"]
+[ext_resource type="Script" path="res://Characters/playersprite.gd" id="4_o25jl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uonxl"]
 size = Vector2(21, 32)
@@ -53,15 +53,14 @@ _data = {
 script = ExtResource("1_yumc7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(7, -5)
+position = Vector2(2.84217e-14, -2.84217e-14)
 scale = Vector2(1.77381, 1.67857)
 texture = ExtResource("2_m46m7")
+offset = Vector2(4, -4)
 hframes = 8
-frame = 1
 script = ExtResource("4_o25jl")
 
 [node name="PlayerCollider" type="CollisionShape2D" parent="." groups=["player"]]
-position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_uonxl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
