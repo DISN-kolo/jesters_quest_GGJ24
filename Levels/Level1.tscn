@@ -20,9 +20,6 @@ layer_1/tile_data = PackedInt32Array(-131077, 262146, 6, -65541, 262146, 7, -5, 
 [node name="Player2" parent="." instance=ExtResource("1_kciqf")]
 position = Vector2(-56, -2)
 slide_on_ceiling = false
-SPEED = 180.0
-JUMP_VELOCITY = -400.0
-down_vel_max = 400.0
 
 [node name="Camera2D2" type="Camera2D" parent="."]
 position = Vector2(24, -50)
