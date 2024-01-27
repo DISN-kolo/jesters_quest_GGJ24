@@ -18,10 +18,13 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/stretch/mode="canvas_items"
+window/size/initial_position_type=2
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 window/stretch/scale=4.0
+mouse_cursor/size/viewport_width=1640
+mouse_cursor/size/viewport_height=1060
+mouse_cursor/root_node_layout_direction=1
 
 [input]
 
@@ -62,3 +65,7 @@ LMB={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+camera/depth_of_field/depth_of_field_bokeh_shape=0
+camera/depth_of_field/depth_of_field_use_jitter=true
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/sdf/scale=0
