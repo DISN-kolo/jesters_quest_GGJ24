@@ -19,7 +19,7 @@ slide_on_ceiling = false
 position = Vector2(24, -50)
 
 [node name="NextLevel2" parent="." instance=ExtResource("2_ir4to")]
-position = Vector2(256, 64)
+position = Vector2(248, 64)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("3_l3vuf")
@@ -51,6 +51,6 @@ offset_left = -176.0
 offset_top = -189.0
 offset_right = -176.0
 offset_bottom = -139.0
-dialogPath = "res://Dialogs/dialog.json"
+dialogPath = "res://Dialogs/level0.json"
 
 [connection signal="dialog_end" from="TextBox" to="." method="_on_text_box_dialog_end"]
