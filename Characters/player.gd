@@ -8,7 +8,7 @@ extends CharacterBody2D
 																				#Brian added some code
 @onready var animation = $AnimationPlayer
 @onready var sprite = $Sprite2D
-var _velocity := Vector2.ZERO #esta linea da alguna clase de problema hay que revisarlo
+
 var _facing_direction := 1
 var _was_moving := false
 																				#Brian added until here
@@ -21,15 +21,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var arrow_scene = preload("res://Projectile/arrow.tscn")
 
 func _physics_process(delta):
-																				#Brian added this part
-	var _horizontal_direction = (
-		Input.get_action_strength("right")
-		- Input.get_action_strength("left")
-	)
-	
-	_velocity.x = _horizontal_direction * SPEED
-	_velocity.y += gravity * delta
-																				#End of Brians's code
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		velocity.y = min(velocity.y, down_vel_max)
@@ -44,7 +35,9 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("left", "right")
+	
 	if direction:
+		$AnimationPlayer.play("main char")
 		velocity.x = direction * SPEED
 																				#some more Brian's crap
 		_facing_direction = -1 if direction > 0 else 1
@@ -53,6 +46,7 @@ func _physics_process(delta):
 																				#Brian is done with his bullshit coding for animations
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		$AnimationPlayer.play("stop")
 																				#okay, Brian needs some extra lines
 		_was_moving = false
 	if _was_moving:
