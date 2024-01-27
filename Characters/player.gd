@@ -75,3 +75,16 @@ func shoot():
 	#arrow.target = target
 	owner.add_child(arrow)
 	
+
+
+func _on_playehitarea_body_entered(body):
+	body.queue_free()
+	if body.is_in_group("enemy_arrow"):
+		print("enem_arrow in player")
+		Stats.player_hp -= 1
+		print(Stats.player_hp)
+		if Stats.player_hp == 0:
+			print("hp ended, scene reset")
+			Stats.player_hp = Stats.START_HP
+			get_tree().reload_current_scene()
+	pass # Replace with function body.

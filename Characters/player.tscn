@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://tnn3emhw52bi"]
+[gd_scene load_steps=10 format=3 uid="uid://tnn3emhw52bi"]
 
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_yumc7"]
 [ext_resource type="Texture2D" uid="uid://ca0wrldp8teaj" path="res://Art Assets/character sprite/main character/Main No Hat Fixed.png" id="2_m46m7"]
@@ -49,6 +49,9 @@ _data = {
 "right": SubResource("Animation_05a65")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djekc"]
+size = Vector2(12, 26)
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_yumc7")
 
@@ -70,3 +73,13 @@ libraries = {
 "": SubResource("AnimationLibrary_6nhsd")
 }
 autoplay = "main char"
+
+[node name="playehitarea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="playerhitbox" type="CollisionShape2D" parent="playehitarea"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_djekc")
+
+[connection signal="body_entered" from="playehitarea" to="." method="_on_playehitarea_body_entered"]
