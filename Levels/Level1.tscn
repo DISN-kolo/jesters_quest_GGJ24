@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="1_kciqf"]
 [ext_resource type="TileSet" uid="uid://bxt3w6ijwrnjc" path="res://Levels/tileset1.tres" id="2_dd0m7"]
 [ext_resource type="PackedScene" uid="uid://cuee5tlcivfip" path="res://UI/hearts.tscn" id="4_wff55"]
+[ext_resource type="PackedScene" uid="uid://p5i1txcgod0m" path="res://Items/hat_pickup.tscn" id="4_r4ver"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="6_wxixb"]
 
 [node name="Level1" type="Node2D"]
@@ -31,3 +32,6 @@ offset_left = 177.0
 offset_top = 62.0
 offset_right = 253.0
 offset_bottom = 78.0
+
+[node name="HatPickup" parent="." instance=ExtResource("4_r4ver")]
+position = Vector2(63, -63)

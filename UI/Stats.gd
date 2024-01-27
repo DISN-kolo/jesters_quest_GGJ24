@@ -1,11 +1,8 @@
 extends Node
 
-var cursor = load("res://Art Assets/crosshair.png")
+var has_hat : bool = false
 
-func _ready():
-	Input.set_custom_mouse_cursor(cursor)
-
-signal no_health
+signal hat_donned
 signal health_changed(value)
 signal max_health_changed(value)
 
@@ -19,3 +16,12 @@ signal max_health_changed(value)
 	set(value):
 		health = value
 		health_changed.emit(health)
+
+var cursor = load("res://Art Assets/crosshair.png")
+func _ready():
+	hat_donned.connect(hat_donned_singleton)
+	Input.set_custom_mouse_cursor(cursor)
+
+func hat_donned_singleton():
+	maxHealth = 5
+	has_hat = true

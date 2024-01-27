@@ -1,3 +1,50 @@
-[gd_scene format=3 uid="uid://p5i1txcgod0m"]
+[gd_scene load_steps=8 format=3 uid="uid://p5i1txcgod0m"]
+
+[ext_resource type="Script" path="res://Items/hat_pickup.gd" id="1_huima"]
+[ext_resource type="Texture2D" uid="uid://b6as2wcccgwfx" path="res://Art Assets/Item Sprites/jester_hat_item_shifted_fix.png" id="1_w04kh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_snuxy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ulwa"]
+atlas = ExtResource("1_w04kh")
+region = Rect2(0, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1cvi"]
+atlas = ExtResource("1_w04kh")
+region = Rect2(24, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi1qq"]
+atlas = ExtResource("1_w04kh")
+region = Rect2(48, 0, 24, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p06pr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ulwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1cvi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi1qq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="HatPickup" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_huima")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_snuxy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_p06pr")
+autoplay = "default"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
