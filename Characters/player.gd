@@ -28,6 +28,12 @@ var random = RandomNumberGenerator.new()
 var arrows = ["res://Art Assets/ball_red.png", "res://Art Assets/ball_blue.png",
 "res://Art Assets/ball_green.png", "res://Art Assets/ball_yellow.png"]
 
+func _ready():
+	Stats.hat_donned.connect(_hat_donned)
+	if Stats.has_hat:
+		print("I have a hat!")
+		sprite.texture = load("res://Art Assets/character sprite/main character/Main Fixed.png")
+
 func _physics_process(delta):
 	if not sprite.visible:
 		return
@@ -113,3 +119,8 @@ func _on_playehitarea_area_entered(area):
 func _on_timer_timeout():
 	sprite.visible = true
 	get_tree().reload_current_scene()
+
+func _hat_donned(): #emitted by hat_pickup
+	Stats.START_HP = 5
+	Stats.player_hp = Stats.START_HP
+	sprite.texture = load("res://Art Assets/character sprite/main character/Main Fixed.png")
