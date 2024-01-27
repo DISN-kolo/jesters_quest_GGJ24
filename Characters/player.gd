@@ -121,6 +121,6 @@ func _on_timer_timeout():
 	get_tree().reload_current_scene()
 
 func _hat_donned(): #emitted by hat_pickup
-	Stats.START_HP = 5
-	Stats.player_hp = Stats.START_HP
+	Stats.maxHealth = 5
+	Stats.health = Stats.maxHealth
 	sprite.texture = load("res://Art Assets/character sprite/main character/Main Fixed.png")

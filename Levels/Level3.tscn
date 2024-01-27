@@ -27,7 +27,7 @@ position = Vector2(-227, -1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(40, -72)
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(3.2, 3.2)
 process_callback = 0
 position_smoothing_enabled = true
 
