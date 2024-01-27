@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cnl4rkiym6yvx"]
 
-[ext_resource type="Texture2D" uid="uid://c8eb6wjoei4js" path="res://Effects/HitEffect.png" id="1_digvt"]
+
+[ext_resource type="Texture2D" uid="uid://hglrr36iouea" path="res://Effects/HitEffect.png" id="1_digvt"]
 [ext_resource type="Script" path="res://Effects/effect.gd" id="2_xprla"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5fesj"]
