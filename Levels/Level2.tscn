@@ -1,14 +1,15 @@
-[gd_scene load_steps=23 format=3 uid="uid://do3vy1t67iuvu"]
+[gd_scene load_steps=21 format=3 uid="uid://bhmxcl28bbkj1"]
 
-[ext_resource type="Texture2D" uid="uid://b6a2pcj1rf40v" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Cloud_small_3.png" id="1_bkrny"]
-[ext_resource type="Texture2D" uid="uid://b8xd0exwrjhdq" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_etl00"]
-[ext_resource type="Texture2D" uid="uid://c6ak5vuyuhsx7" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Cloud_1.png" id="2_dqtok"]
-[ext_resource type="Texture2D" uid="uid://c5q16k60x0er8" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="2_n4vo4"]
-[ext_resource type="Texture2D" uid="uid://dmmv0oomgro5o" path="res://Art Assets/Kings and Pigs/Sprites/Terrain (32x32).png" id="2_u8cyi"]
-[ext_resource type="Texture2D" uid="uid://c1rn2x5b1le88" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Mountain_large_1.png" id="3_6rtrl"]
-[ext_resource type="Texture2D" uid="uid://cemnef5ndadyj" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" id="3_td6bq"]
+[ext_resource type="Script" path="res://Levels/Level0.gd" id="1_0awb7"]
+[ext_resource type="Texture2D" uid="uid://c5t1n0g0gd3r7" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Cloud_small_3.png" id="1_bkrny"]
+[ext_resource type="Texture2D" uid="uid://eb6fsa0xlkec" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_etl00"]
+[ext_resource type="Texture2D" uid="uid://rb3biixn7vx5" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Cloud_1.png" id="2_dqtok"]
+[ext_resource type="Texture2D" uid="uid://vfdwvo0kptl3" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="2_n4vo4"]
+[ext_resource type="Texture2D" uid="uid://b4hijiy13p7x2" path="res://Art Assets/Kings and Pigs/Sprites/Terrain (32x32).png" id="2_u8cyi"]
+[ext_resource type="Texture2D" uid="uid://cd4nxh1v7a5pe" path="res://Art Assets/PixelSpaces Free Pack/Backgrounds/Mountain_large_1.png" id="3_6rtrl"]
+[ext_resource type="Texture2D" uid="uid://doqwc6u842m1r" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" id="3_td6bq"]
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="4_2u6d2"]
-[ext_resource type="Texture2D" uid="uid://c7kcd4x2w7tu" path="res://Art Assets/Treasure Hunters/Merchant Ship/Sprites/Box/Idle/1.png" id="6_8hflh"]
+[ext_resource type="Texture2D" uid="uid://l1q18ggidri4" path="res://Art Assets/Treasure Hunters/Merchant Ship/Sprites/Box/Idle/1.png" id="6_8hflh"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="6_8m8ys"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkfyh"]
@@ -2628,33 +2629,8 @@ sources/1 = SubResource("TileSetAtlasSource_qslg3")
 sources/2 = SubResource("TileSetAtlasSource_akb52")
 sources/5 = SubResource("TileSetAtlasSource_0er2b")
 
-[sub_resource type="Animation" id="Animation_kvsdb"]
-length = 0.001
-
-[sub_resource type="Animation" id="Animation_efkrf"]
-resource_name = "main char"
-length = 1.18
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame_coords")
-tracks/0/interp = 2
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(-0.1, 0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0), Vector2i(6, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6nhsd"]
-_data = {
-"RESET": SubResource("Animation_kvsdb"),
-"main char": SubResource("Animation_efkrf")
-}
-
 [node name="Level2" type="Node2D"]
+script = ExtResource("1_0awb7")
 
 [node name="Tiles" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ct6i0")
@@ -2672,18 +2648,6 @@ layer_3/tile_data = PackedInt32Array(-589831, 3, 6, -524295, 3, 7, -589830, 6553
 
 [node name="Player" parent="." instance=ExtResource("4_2u6d2")]
 position = Vector2(-40, 0)
-
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="Player"]
-root_node = NodePath("../Sprite2D")
-libraries = {
-"": SubResource("AnimationLibrary_6nhsd")
-}
-
-[node name="Sprite2D2" type="Sprite2D" parent="Player"]
-position = Vector2(-105, 16)
-scale = Vector2(1.77381, 1.67857)
-hframes = 8
-frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(40, -72)

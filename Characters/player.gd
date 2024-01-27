@@ -23,8 +23,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _physics_process(delta):
 																				#Brian added this part
 	var _horizontal_direction = (
-		Input.get_action_strength("move_right")
-		- Input.get_action_strength("move_left")
+		Input.get_action_strength("right")
+		- Input.get_action_strength("left")
 	)
 	
 	_velocity.x = _horizontal_direction * SPEED
@@ -48,7 +48,7 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 																				#some more Brian's crap
 		_facing_direction = -1 if direction > 0 else 1
-		animation.play("Run")
+		#animation.play("Run")
 		_was_moving = true
 																				#Brian is done with his bullshit coding for animations
 	else:
