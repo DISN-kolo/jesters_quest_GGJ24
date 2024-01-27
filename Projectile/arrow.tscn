@@ -1,16 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwq0ejpjod43q"]
+[gd_scene load_steps=4 format=3 uid="uid://dwq0ejpjod43q"]
 
 [ext_resource type="Texture2D" uid="uid://crtfuw1ciqycq" path="res://Projectile/arrow.png" id="1_7p4vo"]
+[ext_resource type="Script" path="res://Projectile/ArrowRBody.gd" id="2_l5n6w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61owc"]
 size = Vector2(2, 6)
 
-[node name="Arrow" type="Node2D"]
+[node name="Arrow" type="RigidBody2D" groups=["arrow"]]
+collision_layer = 2
+collision_mask = 2
+gravity_scale = 0.369
+continuous_cd = 2
+script = ExtResource("2_l5n6w")
 
 [node name="ArrowSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_7p4vo")
 
-[node name="ArrowRBody" type="RigidBody2D" parent="."]
-
-[node name="ArrowCollider" type="CollisionShape2D" parent="ArrowRBody"]
+[node name="ArrowCollider" type="CollisionShape2D" parent="." groups=["arrow"]]
 shape = SubResource("RectangleShape2D_61owc")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
+
 @export var SPEED = 180.0
 @export var JUMP_VELOCITY = -400.0
+
 @export var down_vel_max = 400.0
 																				#Brian added some code
 @onready var animation = $AnimationPlayer
@@ -11,9 +13,12 @@ var _facing_direction := 1
 var _was_moving := false
 																				#Brian added until here
 
+# jump grace
+var floorer = 1.0
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var arrow_scene = preload("res://Projectile/arrow.tscn")
+@onready var arrow_scene = preload("res://Projectile/arrow.tscn")
 
 func _physics_process(delta):
 																				#Brian added this part
@@ -28,9 +33,12 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		velocity.y = min(velocity.y, down_vel_max)
+		floorer = lerp(floorer, 0.0, 40*delta)
+	else:
+		floorer = 1.0
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump")  and floorer > 0.001:
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -58,5 +66,11 @@ func _physics_process(delta):
 func shoot():
 	var target = get_global_mouse_position()
 	var start = self.global_position
-	
+	var arrow = arrow_scene.instantiate()
+	arrow.global_position = start
+	arrow.rotation = (target - start).angle() + PI/2
+	arrow.vel = (target - start)
+	#arrow.speed = 2000
+	#arrow.target = target
+	owner.add_child(arrow)
 	

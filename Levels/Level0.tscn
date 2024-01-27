@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=15 format=3 uid="uid://cmpkquubl8n7u"]
 
 [ext_resource type="Texture2D" uid="uid://d2ymmixilpytk" path="res://Levels/icon2.png" id="1_2m3by"]
@@ -8,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c8chxcb6tppk8" path="res://Art Assets/Kings and Pigs/Sprites/Decorations (32x32).png" id="4_twjth"]
 [ext_resource type="Texture2D" uid="uid://c5q16k60x0er8" path="res://Art Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="5_5wbb0"]
 [ext_resource type="Texture2D" uid="uid://caen2brqejf4x" path="res://Art Assets/Treasure Hunters/Merchant Ship/Sprites/Chest/Idle/1.png" id="6_tb7gv"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bp8o"]
 texture = ExtResource("1_2m3by")
@@ -2007,7 +2009,8 @@ texture = ExtResource("6_tb7gv")
 1:1/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_3xog6"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_0bp8o")
 sources/1 = SubResource("TileSetAtlasSource_xhyvw")
 sources/2 = SubResource("TileSetAtlasSource_b3taj")
@@ -2032,3 +2035,7 @@ position = Vector2(23, 47)
 
 [node name="NextLevel" parent="." instance=ExtResource("3_ns637")]
 position = Vector2(138, 49)
+
+[node name="Goblin" parent="." instance=ExtResource("5_p56x7")]
+position = Vector2(-114, 47)
+

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dr8rh4paoovmo"]
+
+[ext_resource type="Texture2D" uid="uid://bhsue26s1vwoy" path="res://Characters/dude.png" id="1_16bs1"]
+[ext_resource type="Script" path="res://Characters/goblin.gd" id="1_xx3yk"]
+[ext_resource type="PackedScene" uid="uid://b8l6bano6y1n1" path="res://Shared/hurt_box.tscn" id="3_sr2fc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o7cxp"]
+height = 34.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q57vo"]
+radius = 9.0
+height = 34.0
+
+[node name="Goblin" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_xx3yk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_16bs1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_o7cxp")
+
+[node name="HurtBox" parent="." instance=ExtResource("3_sr2fc")]
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+shape = SubResource("CapsuleShape2D_q57vo")
+
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
+[connection signal="invincibilityEnd" from="HurtBox" to="." method="_on_hurt_box_invincibility_end"]
+[connection signal="invincibilityStart" from="HurtBox" to="." method="_on_hurt_box_invincibility_start"]
+[connection signal="timeout" from="HurtBox/Timer" to="." method="_on_timer_timeout"]
+
+[editable path="HurtBox"]
