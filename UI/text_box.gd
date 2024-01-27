@@ -13,6 +13,8 @@ var dialog
 var actual_phrase = 0
 var end = false
 
+signal dialog_end
+
 func _ready():
 	timer.wait_time = textSpeed
 	dialog = getDialog()
@@ -41,6 +43,7 @@ func getDialog():
 
 func nextPhrase():
 	if actual_phrase >= len(dialog):
+		dialog_end.emit()
 		queue_free()
 		return
 	end = false
