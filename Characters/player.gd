@@ -92,11 +92,10 @@ func createDeathEffect():
 	get_parent().add_child(deathEffect)
 
 func take_damage():
-	Stats.player_hp -= 1
-	if Stats.player_hp == 0:
+	Stats.health -= 1
+	if Stats.health == 0:
 		createDeathEffect()
 		sprite.visible = false
-		Stats.player_hp = Stats.START_HP
 		timer.start(2)
 	else:
 		createHitEffect()
@@ -112,4 +111,5 @@ func _on_playehitarea_area_entered(area):
 
 func _on_timer_timeout():
 	sprite.visible = true
+	Stats.health = Stats.maxHealth
 	get_tree().reload_current_scene()
