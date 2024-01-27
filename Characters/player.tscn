@@ -1,16 +1,73 @@
-[gd_scene load_steps=4 format=3 uid="uid://tnn3emhw52bi"]
+[gd_scene load_steps=9 format=3 uid="uid://tnn3emhw52bi"]
 
-[ext_resource type="Texture2D" uid="uid://bdnya4ykjiajt" path="res://Characters/dude.png" id="1_l062v"]
+
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_yumc7"]
+[ext_resource type="Texture2D" uid="uid://ho8ta30cdnnw" path="res://Art Assets/character sprite/main character/Main No Hat Fixed.png" id="2_m46m7"]
+[ext_resource type="Script" path="res://Levels/Sprite2D.gd" id="4_o25jl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uonxl"]
-size = Vector2(16, 32)
+size = Vector2(21, 32)
+
+[sub_resource type="Animation" id="Animation_kvsdb"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_efkrf"]
+resource_name = "main char"
+length = 1.18
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.1, 0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0), Vector2i(6, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_05a65"]
+resource_name = "right"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.1, 0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0), Vector2i(6, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6nhsd"]
+_data = {
+"RESET": SubResource("Animation_kvsdb"),
+"main char": SubResource("Animation_efkrf"),
+"right": SubResource("Animation_05a65")
+}
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_yumc7")
 
-[node name="PlayerSprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_l062v")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7, -5)
+scale = Vector2(1.77381, 1.67857)
+texture = ExtResource("2_m46m7")
+hframes = 8
+frame = 4
+script = ExtResource("4_o25jl")
 
 [node name="PlayerCollider" type="CollisionShape2D" parent="." groups=["player"]]
+position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_uonxl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_6nhsd")
+}
+autoplay = "main char"
