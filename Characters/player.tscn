@@ -57,6 +57,7 @@ position = Vector2(2.84217e-14, -2.84217e-14)
 scale = Vector2(1.77381, 1.67857)
 texture = ExtResource("2_m46m7")
 offset = Vector2(4, -4)
+flip_h = true
 hframes = 8
 script = ExtResource("4_o25jl")
 
