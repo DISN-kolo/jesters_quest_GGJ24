@@ -29,6 +29,8 @@ var arrows = ["res://Art Assets/ball_red.png", "res://Art Assets/ball_blue.png",
 "res://Art Assets/ball_green.png", "res://Art Assets/ball_yellow.png"]
 
 func _physics_process(delta):
+	if not sprite.visible:
+		return
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		velocity.y = min(velocity.y, down_vel_max)
@@ -68,7 +70,7 @@ func shoot():
 	var arrowsprite = arrows[random.randi_range(0, 3)]
 	var target = get_global_mouse_position()
 	var start = self.global_position - Vector2(_facing_direction*10, 0) - Vector2(10, 0) # I HAVE NO IDEA WHY DID IT OFFSET TO THE RIGHT
-	print(start)
+	#print(start)
 	var arrow = arrow_scene.instantiate()
 	arrow.sprite = arrowsprite
 	arrow.global_position = start
@@ -79,9 +81,10 @@ func shoot():
 	owner.add_child(arrow)
 
 func createHitEffect():
-	var hitEffect = HitEffect.instantiate()
-	hitEffect.global_position = global_position
-	get_parent().add_child(hitEffect)
+	if sprite.visible:
+		var hitEffect = HitEffect.instantiate()
+		hitEffect.global_position = global_position
+		get_parent().add_child(hitEffect)
 	
 func createDeathEffect():
 	var deathEffect = DeathEffect.instantiate()
@@ -99,6 +102,7 @@ func take_damage():
 		createHitEffect()
 
 func _on_playehitarea_body_entered(body):
+	print(body, " hit player")
 	if body.is_in_group("enemy_arrow"):
 		body.queue_free()
 		take_damage()
