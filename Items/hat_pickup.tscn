@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://p5i1txcgod0m"]
+[gd_scene load_steps=9 format=3 uid="uid://p5i1txcgod0m"]
 
 [ext_resource type="Script" path="res://Items/hat_pickup.gd" id="1_huima"]
-[ext_resource type="Texture2D" uid="uid://b6as2wcccgwfx" path="res://Art Assets/Item Sprites/jester_hat_item_shifted_fix.png" id="1_w04kh"]
+[ext_resource type="Texture2D" uid="uid://d0pn0cit8u01o" path="res://Art Assets/Item Sprites/jester_hat_item_shifted_fix.png" id="1_w04kh"]
+[ext_resource type="AudioStream" uid="uid://clvj3tc4ako1i" path="res://Sounds/item_pickup_supposedly_royalty_free.mp3" id="3_h6fgt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snuxy"]
 
@@ -46,5 +47,9 @@ shape = SubResource("RectangleShape2D_snuxy")
 sprite_frames = SubResource("SpriteFrames_p06pr")
 autoplay = "default"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h6fgt")
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

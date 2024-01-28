@@ -73,7 +73,8 @@ func _physics_process(delta):
 	move_and_slide()
 
 func shoot():
-	var arrowsprite = arrows[random.randi_range(0, 3)]
+	var index_chosen = random.randi_range(0, 3)
+	var arrowsprite = arrows[index_chosen]
 	var target = get_global_mouse_position()
 	var start = self.global_position - Vector2(_facing_direction*10, 0) #- Vector2(20, 0) # I HAVE NO IDEA WHY DID IT OFFSET TO THE RIGHT
 	#print(start)
@@ -82,6 +83,7 @@ func shoot():
 	arrow.global_position = start
 	#arrow.rotation = (target - start).angle() + PI/2
 	arrow.vel = (target - start)
+	arrow.sample_pitch = 15 + index_chosen + random.randf_range(-2, 2)
 	#arrow.speed = 2000
 	#arrow.target = target
 	owner.add_child(arrow)

@@ -1,0 +1,15 @@
+[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://dfo3snkmvdf8n"]
+
+[sub_resource type="AudioEffectBandPassFilter" id="AudioEffectBandPassFilter_gi6fy"]
+resource_name = "BandPassFilter"
+cutoff_hz = 2770.0
+
+[resource]
+bus/1/name = &"Arrow"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectBandPassFilter_gi6fy")
+bus/1/effect/0/enabled = true
