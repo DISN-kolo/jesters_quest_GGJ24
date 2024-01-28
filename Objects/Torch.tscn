@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cqn3uljww6abv"]
 
-[ext_resource type="Texture2D" uid="uid://bx3vy4mb74kxp" path="res://Art Assets/Animated/torch_anim.png" id="1_plras"]
+[ext_resource type="Texture2D" uid="uid://ddth6p6n6xwa1" path="res://Art Assets/Animated/torch_anim.png" id="1_plras"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g175u"]
 atlas = ExtResource("1_plras")
@@ -45,7 +45,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+[node name="Torch" type="AnimatedSprite2D"]
 z_index = -1
 position = Vector2(-176, 8)
 scale = Vector2(2, 2)
