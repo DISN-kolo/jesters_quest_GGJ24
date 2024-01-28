@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bgylhm6qepfxe"]
+[gd_scene load_steps=9 format=3 uid="uid://bgylhm6qepfxe"]
 
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="1_kciqf"]
 [ext_resource type="TileSet" uid="uid://bxt3w6ijwrnjc" path="res://Levels/tileset1.tres" id="2_dd0m7"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" path="res://UI/pause_menu.tscn" id="6_6a7cl"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="6_wxixb"]
 [ext_resource type="PackedScene" uid="uid://0rpdli2yg0ma" path="res://Objects/Killzone.tscn" id="7_epe72"]
+[ext_resource type="PackedScene" uid="uid://dp76bydmipnci" path="res://UI/camera_2d_2.tscn" id="8_7b4fn"]
 
 [node name="Level1" type="Node2D"]
 position = Vector2(8, 2)
@@ -22,10 +23,6 @@ layer_1/tile_data = PackedInt32Array(-131077, 262146, 6, -65541, 262146, 7, -5, 
 [node name="Player2" parent="." instance=ExtResource("1_kciqf")]
 position = Vector2(-184, 62)
 slide_on_ceiling = false
-
-[node name="Camera2D2" type="Camera2D" parent="."]
-position = Vector2(24, -50)
-zoom = Vector2(4, 4)
 
 [node name="NextLevel2" parent="." instance=ExtResource("6_wxixb")]
 position = Vector2(253, 62)
@@ -47,3 +44,5 @@ offset_bottom = 14.0
 
 [node name="Killzone" parent="." instance=ExtResource("7_epe72")]
 position = Vector2(16, 110)
+
+[node name="Camera2D2" parent="." instance=ExtResource("8_7b4fn")]
