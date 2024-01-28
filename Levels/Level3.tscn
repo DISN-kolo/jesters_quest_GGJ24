@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bgnbsw2467v3l"]
+[gd_scene load_steps=9 format=3 uid="uid://bgnbsw2467v3l"]
 
 [ext_resource type="TileSet" uid="uid://p6k7chtpc7xg" path="res://Levels/tileset2.tres" id="1_v0upk"]
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="2_3gpe2"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bbeflllxqelnn" path="res://Characters/goblin_archer.tscn" id="5_adxh3"]
 [ext_resource type="PackedScene" uid="uid://b6tmly82k3jj4" path="res://UI/pause_menu.tscn" id="6_s8v05"]
 [ext_resource type="PackedScene" uid="uid://0rpdli2yg0ma" path="res://Objects/Killzone.tscn" id="7_grp3a"]
+[ext_resource type="PackedScene" uid="uid://dp76bydmipnci" path="res://UI/camera_2d_2.tscn" id="8_drgl0"]
 
 [node name="Level3" type="Node2D"]
 
@@ -26,12 +27,6 @@ layer_3/tile_data = PackedInt32Array(-589831, 3, 6, -524295, 3, 7, -589830, 6553
 
 [node name="Player" parent="." instance=ExtResource("2_3gpe2")]
 position = Vector2(-227, -1)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(40, -72)
-zoom = Vector2(3.2, 3.2)
-process_callback = 0
-position_smoothing_enabled = true
 
 [node name="NextLevel" parent="." instance=ExtResource("3_faquu")]
 position = Vector2(316, -4)
@@ -53,3 +48,7 @@ offset_bottom = -2.0
 
 [node name="Killzone" parent="." instance=ExtResource("7_grp3a")]
 position = Vector2(22, 101)
+
+[node name="Camera2D2" parent="." instance=ExtResource("8_drgl0")]
+position = Vector2(46, -66)
+zoom = Vector2(3.2, 3.2)

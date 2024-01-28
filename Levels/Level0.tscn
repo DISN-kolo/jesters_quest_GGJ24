@@ -10,13 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://bmr7pi6lklyd0" path="res://Characters/king.tscn" id="7_7wi3t"]
 [ext_resource type="PackedScene" uid="uid://cuee5tlcivfip" path="res://UI/hearts.tscn" id="8_w33lr"]
 [ext_resource type="PackedScene" uid="uid://b6tmly82k3jj4" path="res://UI/pause_menu.tscn" id="9_ormbh"]
+[ext_resource type="PackedScene" uid="uid://dp76bydmipnci" path="res://UI/camera_2d_2.tscn" id="10_3eo8k"]
 
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_v5l8o")
 
-[node name="Camera2D2" type="Camera2D" parent="."]
-position = Vector2(24, -50)
-zoom = Vector2(4, 4)
+[node name="Player" parent="." instance=ExtResource("1_7ywxs")]
+position = Vector2(-184, 62)
+slide_on_ceiling = false
 
 [node name="NextLevel2" parent="." instance=ExtResource("2_ir4to")]
 position = Vector2(248, 64)
@@ -77,5 +78,7 @@ offset_left = -4.0
 offset_top = -79.0
 offset_right = 68.0
 offset_bottom = 21.0
+
+[node name="Camera2D2" parent="." instance=ExtResource("10_3eo8k")]
 
 [connection signal="dialog_end" from="TextBox" to="." method="_on_text_box_dialog_end"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp76bydmipnci"]
+
+[ext_resource type="PackedScene" uid="uid://cdn7mq3ioi4db" path="res://UI/mousecursor.tscn" id="1_ounks"]
+
+[node name="Camera2D2" type="Camera2D"]
+position = Vector2(24, -50)
+zoom = Vector2(4, 4)
+
+[node name="mousecursor" parent="." instance=ExtResource("1_ounks")]
