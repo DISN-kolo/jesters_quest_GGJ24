@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="2_ir4to"]
 [ext_resource type="TileSet" uid="uid://bxt3w6ijwrnjc" path="res://Levels/tileset1.tres" id="3_l3vuf"]
 [ext_resource type="PackedScene" uid="uid://cqn3uljww6abv" path="res://Objects/Torch.tscn" id="4_ssn0i"]
-[ext_resource type="Texture2D" uid="uid://dcckmnbvvsqvr" path="res://Art Assets/Terrains and Deco/Throne.png" id="5_ndhws"]
+[ext_resource type="Texture2D" uid="uid://iogycodjyn84" path="res://Art Assets/Terrains and Deco/Throne.png" id="5_ndhws"]
 [ext_resource type="PackedScene" uid="uid://ba86sjglgo2q6" path="res://UI/text_box.tscn" id="6_jdin1"]
 [ext_resource type="PackedScene" uid="uid://cuee5tlcivfip" path="res://UI/hearts.tscn" id="8_w33lr"]
 
