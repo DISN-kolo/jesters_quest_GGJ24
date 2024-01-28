@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://ort5p01rvte1"]
+[gd_scene load_steps=10 format=3 uid="uid://ort5p01rvte1"]
 
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="1_7ywxs"]
 [ext_resource type="Script" path="res://Levels/Level0.gd" id="1_v5l8o"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="2_ir4to"]
 [ext_resource type="TileSet" uid="uid://bxt3w6ijwrnjc" path="res://Levels/tileset1.tres" id="3_l3vuf"]
 [ext_resource type="PackedScene" uid="uid://cqn3uljww6abv" path="res://Objects/Torch.tscn" id="4_ssn0i"]
-[ext_resource type="Texture2D" uid="uid://iogycodjyn84" path="res://Art Assets/Terrains and Deco/Throne.png" id="5_ndhws"]
+[ext_resource type="Texture2D" uid="uid://da6uc601adi7" path="res://Art Assets/Terrains and Deco/Throne.png" id="5_ndhws"]
 [ext_resource type="PackedScene" uid="uid://ba86sjglgo2q6" path="res://UI/text_box.tscn" id="6_jdin1"]
 [ext_resource type="PackedScene" uid="uid://cuee5tlcivfip" path="res://UI/hearts.tscn" id="8_w33lr"]
+[ext_resource type="PackedScene" uid="uid://b6tmly82k3jj4" path="res://UI/pause_menu.tscn" id="9_ormbh"]
 
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_v5l8o")
@@ -64,5 +65,11 @@ offset_left = -210.0
 offset_top = -179.0
 offset_right = -114.0
 offset_bottom = -163.0
+
+[node name="PauseMenu" parent="." instance=ExtResource("9_ormbh")]
+offset_left = -4.0
+offset_top = -79.0
+offset_right = 68.0
+offset_bottom = 21.0
 
 [connection signal="dialog_end" from="TextBox" to="." method="_on_text_box_dialog_end"]
