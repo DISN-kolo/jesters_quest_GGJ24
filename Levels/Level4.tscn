@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://0rpdli2yg0ma" path="res://Objects/Killzone.tscn" id="4_5ky8g"]
 [ext_resource type="PackedScene" uid="uid://dr8rh4paoovmo" path="res://Characters/goblin.tscn" id="5_myyep"]
 [ext_resource type="PackedScene" uid="uid://cuee5tlcivfip" path="res://UI/hearts.tscn" id="6_sedci"]
-[ext_resource type="PackedScene" uid="uid://b6tmly82k3jj4" path="res://UI/pause_menu.tscn" id="7_v6i61"]
+[ext_resource type="PackedScene" path="res://UI/pause_menu.tscn" id="7_v6i61"]
 
 [node name="Level4" type="Node2D"]
 
