@@ -7,7 +7,7 @@ signal health_changed(value)
 signal max_health_changed(value)
 signal menu_paused
 
-var cursor = load("res://Art Assets/crosshair.png")
+#var cursor = load("res://Art Assets/crosshair.png")
 
 @export var maxHealth: int = 3:
 	set(value):
@@ -22,7 +22,7 @@ var cursor = load("res://Art Assets/crosshair.png")
 
 func _ready():
 	hat_donned.connect(hat_donned_singleton)
-	Input.set_custom_mouse_cursor(cursor)
+	#Input.set_custom_mouse_cursor(cursor)
 
 func hat_donned_singleton():
 	maxHealth = 5
