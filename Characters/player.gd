@@ -13,6 +13,8 @@ var shoot_cd = SHOOT_CD
 @onready var sprite = $Sprite2D
 @onready var timer = $Timer
 
+var the_end = false
+
 var _facing_direction := -1
 var _was_moving := false
 
@@ -35,7 +37,7 @@ func _ready():
 		sprite.texture = load("res://Art Assets/character sprite/main character/Main Fixed.png")
 
 func _physics_process(delta):
-	if not sprite.visible:
+	if not sprite.visible or the_end:
 		return
 	if not is_on_floor():
 		velocity.y += gravity * delta
