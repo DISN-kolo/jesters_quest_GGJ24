@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="2_ir4to"]
 [ext_resource type="TileSet" uid="uid://bxt3w6ijwrnjc" path="res://Levels/tileset1.tres" id="3_l3vuf"]
 [ext_resource type="PackedScene" uid="uid://cqn3uljww6abv" path="res://Objects/Torch.tscn" id="4_ssn0i"]
-[ext_resource type="Texture2D" uid="uid://dcckmnbvvsqvr" path="res://Art Assets/Terrains and Deco/Throne.png" id="5_ndhws"]
+[ext_resource type="Texture2D" uid="uid://bg11yrspdu2gv" path="res://Art Assets/Terrains and Deco/Throne.png" id="5_ndhws"]
 [ext_resource type="PackedScene" uid="uid://ba86sjglgo2q6" path="res://UI/text_box.tscn" id="6_jdin1"]
 [ext_resource type="PackedScene" uid="uid://cuee5tlcivfip" path="res://UI/hearts.tscn" id="8_w33lr"]
 
@@ -49,16 +49,20 @@ texture = ExtResource("5_ndhws")
 offset = Vector2(0, 20.49)
 
 [node name="TextBox" parent="." instance=ExtResource("6_jdin1")]
-offset_left = -176.0
-offset_top = -189.0
-offset_right = -176.0
-offset_bottom = -139.0
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = -66.0
+offset_top = -164.0
+offset_right = -66.0
+offset_bottom = -164.0
+grow_horizontal = 1
+scale = Vector2(0.5, 0.5)
 dialogPath = "res://Dialogs/level0.json"
 
 [node name="Hearts" parent="." instance=ExtResource("8_w33lr")]
-offset_left = 179.0
-offset_top = 61.0
-offset_right = 255.0
-offset_bottom = 77.0
+offset_left = -210.0
+offset_top = -179.0
+offset_right = -114.0
+offset_bottom = -163.0
 
 [connection signal="dialog_end" from="TextBox" to="." method="_on_text_box_dialog_end"]
