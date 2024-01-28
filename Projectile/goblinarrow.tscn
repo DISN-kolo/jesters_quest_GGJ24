@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dufv2pcv3wd40"]
+[gd_scene load_steps=5 format=3 uid="uid://dufv2pcv3wd40"]
 
 [ext_resource type="Script" path="res://Projectile/GoblinArrowRBody.gd" id="1_cv2oh"]
-[ext_resource type="Texture2D" uid="uid://cxkg3eoj3405j" path="res://Art Assets/enemy_arrow.png" id="2_5vt8n"]
+[ext_resource type="Texture2D" uid="uid://df34lrloejhpx" path="res://Art Assets/enemy_arrow.png" id="2_5vt8n"]
+[ext_resource type="AudioStream" uid="uid://cycky2q08wj1t" path="res://Sounds/Hit.wav" id="3_rdhjk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uyprp"]
 size = Vector2(5, 6.75)
@@ -28,6 +29,14 @@ process_callback = 0
 wait_time = 2.0
 one_shot = true
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rdhjk")
+volume_db = -15.985
+pitch_scale = 4.0
+autoplay = true
+max_polyphony = 5
+bus = &"Arrow"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
