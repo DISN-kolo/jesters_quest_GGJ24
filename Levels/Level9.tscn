@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://p5i1txcgod0m" path="res://Items/hat_pickup.tscn" id="8_06q4m"]
 [ext_resource type="PackedScene" uid="uid://cuee5tlcivfip" path="res://UI/hearts.tscn" id="8_p0gpx"]
 
-[node name="Level8" type="Node2D"]
+[node name="Level9" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_d7aeg")
