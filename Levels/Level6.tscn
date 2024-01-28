@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ctwa14b5kawnq"]
+[gd_scene load_steps=19 format=3 uid="uid://ctwa14b5kawnq"]
 
 [ext_resource type="TileSet" uid="uid://p6k7chtpc7xg" path="res://Levels/tileset2.tres" id="1_slpg4"]
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="2_dm2cx"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://dpjj3biw1i7dd" path="res://Art Assets/Terrains and Deco/PixelSpaces Free Pack/Objects/Kitchen/Microwave_white.png" id="14_bromj"]
 [ext_resource type="Texture2D" uid="uid://bt20tvvd3mv7n" path="res://Art Assets/Terrains and Deco/PixelSpaces Free Pack/Furniture/Stairs.png" id="15_gaffs"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="16_y7pq1"]
+[ext_resource type="PackedScene" uid="uid://cuee5tlcivfip" path="res://UI/hearts.tscn" id="17_yi5gs"]
+[ext_resource type="PackedScene" path="res://UI/pause_menu.tscn" id="18_100pm"]
 
 [node name="Level6" type="Node2D"]
 
@@ -107,3 +109,11 @@ position = Vector2(136, 64)
 
 [node name="NextLevel" parent="." instance=ExtResource("16_y7pq1")]
 position = Vector2(232, 112)
+
+[node name="Hearts" parent="." instance=ExtResource("17_yi5gs")]
+offset_left = -237.0
+offset_top = -133.0
+offset_right = -141.0
+offset_bottom = -117.0
+
+[node name="PauseMenu" parent="." instance=ExtResource("18_100pm")]
