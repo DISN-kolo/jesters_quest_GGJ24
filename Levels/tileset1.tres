@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://bxt3w6ijwrnjc"]
 
-[ext_resource type="Texture2D" uid="uid://b5ys146yftt8p" path="res://Levels/icon2.png" id="1_m3x8r"]
-[ext_resource type="Texture2D" uid="uid://bt10u2h36yyaw" path="res://Art Assets/Terrains and Deco/Kings and Pigs/Sprites/Terrain (32x32).png" id="2_rt3u2"]
-[ext_resource type="Texture2D" uid="uid://cvg1bw458kssq" path="res://Art Assets/Terrains and Deco/Kings and Pigs/Sprites/Decorations (32x32).png" id="3_cpvjp"]
+[ext_resource type="Texture2D" uid="uid://do2h3erf3lebj" path="res://Levels/icon2.png" id="1_m3x8r"]
+[ext_resource type="Texture2D" uid="uid://gbjnggi0vqkw" path="res://Art Assets/Terrains and Deco/Kings and Pigs/Sprites/Terrain (32x32).png" id="2_rt3u2"]
+[ext_resource type="Texture2D" uid="uid://rgy7lcg4g6a8" path="res://Art Assets/Terrains and Deco/Kings and Pigs/Sprites/Decorations (32x32).png" id="3_cpvjp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0bp8o"]
 texture = ExtResource("1_m3x8r")
