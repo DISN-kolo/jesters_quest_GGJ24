@@ -33,10 +33,10 @@ position = Vector2(-79, 135)
 position = Vector2(-80, -32)
 
 [node name="Hearts" parent="." instance=ExtResource("6_sedci")]
-offset_left = -231.0
-offset_top = -125.0
-offset_right = -135.0
-offset_bottom = -109.0
+offset_left = 144.0
+offset_top = -136.0
+offset_right = 240.0
+offset_bottom = -120.0
 
 [node name="Goblin2" parent="." instance=ExtResource("5_myyep")]
 position = Vector2(112, 16)

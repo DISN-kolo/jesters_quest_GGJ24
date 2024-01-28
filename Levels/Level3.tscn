@@ -35,9 +35,9 @@ position = Vector2(316, -4)
 position = Vector2(235, 16)
 
 [node name="Hearts" parent="." instance=ExtResource("5_3ayip")]
-offset_left = -245.0
+offset_left = 240.0
 offset_top = -232.0
-offset_right = -149.0
+offset_right = 336.0
 offset_bottom = -216.0
 
 [node name="PauseMenu" parent="." instance=ExtResource("6_s8v05")]

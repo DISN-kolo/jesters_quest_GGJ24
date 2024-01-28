@@ -108,13 +108,13 @@ position = Vector2(136, 64)
 [node name="NextLevel" parent="." instance=ExtResource("16_y7pq1")]
 position = Vector2(232, 112)
 
-[node name="Hearts" parent="." instance=ExtResource("17_yi5gs")]
-offset_left = -237.0
-offset_top = -133.0
-offset_right = -141.0
-offset_bottom = -117.0
-
 [node name="PauseMenu" parent="." instance=ExtResource("18_100pm")]
 
 [node name="Camera2D2" parent="." instance=ExtResource("19_v8hda")]
 position = Vector2(0, 1)
+
+[node name="Hearts" parent="." instance=ExtResource("17_yi5gs")]
+offset_left = 144.0
+offset_top = -128.0
+offset_right = 240.0
+offset_bottom = -112.0

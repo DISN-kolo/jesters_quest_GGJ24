@@ -61,11 +61,11 @@ position = Vector2(-91, 126)
 [node name="Goblin Archer2" parent="." instance=ExtResource("4_bdcr3")]
 position = Vector2(37, 126)
 
-[node name="Hearts" parent="." instance=ExtResource("10_qtngr")]
-offset_left = 131.0
-offset_top = -127.0
-offset_right = 227.0
-offset_bottom = -111.0
-
 [node name="Goblin Archer3" parent="." instance=ExtResource("4_bdcr3")]
 position = Vector2(20, -64)
+
+[node name="Hearts" parent="." instance=ExtResource("10_qtngr")]
+offset_left = 136.0
+offset_top = -136.0
+offset_right = 232.0
+offset_bottom = -120.0
