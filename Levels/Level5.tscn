@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="3_ju5st"]
 [ext_resource type="PackedScene" uid="uid://0rpdli2yg0ma" path="res://Objects/Killzone.tscn" id="4_w35nm"]
 [ext_resource type="PackedScene" uid="uid://cuee5tlcivfip" path="res://UI/hearts.tscn" id="6_fpk1a"]
-[ext_resource type="PackedScene" uid="uid://b6tmly82k3jj4" path="res://UI/pause_menu.tscn" id="7_63cbf"]
+[ext_resource type="PackedScene" path="res://UI/pause_menu.tscn" id="7_63cbf"]
 [ext_resource type="PackedScene" uid="uid://dp76bydmipnci" path="res://UI/camera_2d_2.tscn" id="8_1x6n2"]
 [ext_resource type="PackedScene" uid="uid://bbeflllxqelnn" path="res://Characters/goblin_archer.tscn" id="8_pwd0c"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bnrvurb504bau"]
 
 [ext_resource type="Script" path="res://Levels/next_level.gd" id="1_x0qm1"]
-[ext_resource type="Texture2D" uid="uid://lesar3xj2q0" path="res://Art Assets/Item Sprites/next_level_arrow.png" id="2_oqgwh"]
+[ext_resource type="Texture2D" uid="uid://d3vkw8gfu3p0c" path="res://Art Assets/Item Sprites/next_level_arrow.png" id="2_oqgwh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aiier"]
 height = 112.0
