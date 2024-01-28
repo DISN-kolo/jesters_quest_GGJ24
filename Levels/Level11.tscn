@@ -24,11 +24,6 @@ layer_2/tile_data = PackedInt32Array(131082, 1441793, 15, 196618, 1441793, 16, 1
 [node name="Player" parent="." instance=ExtResource("2_f03aj")]
 position = Vector2(-230, -116)
 
-[node name="PauseMenu" parent="." instance=ExtResource("3_cbws7")]
-visible = false
-offset_top = -51.0
-offset_bottom = 49.0
-
 [node name="Camera2D2" parent="." instance=ExtResource("4_1uiog")]
 position = Vector2(0, -2)
 
@@ -43,3 +38,7 @@ offset_left = 131.0
 offset_top = -127.0
 offset_right = 227.0
 offset_bottom = -111.0
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_cbws7")]
+offset_top = -51.0
+offset_bottom = 49.0

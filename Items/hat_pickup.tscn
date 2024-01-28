@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://clvj3tc4ako1i" path="res://Sounds/item_pickup_supposedly_royalty_free.mp3" id="3_h6fgt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snuxy"]
+size = Vector2(59, 123)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ulwa"]
 atlas = ExtResource("1_w04kh")
@@ -41,6 +42,7 @@ collision_mask = 2
 script = ExtResource("1_huima")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(19.5, -31.5)
 shape = SubResource("RectangleShape2D_snuxy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

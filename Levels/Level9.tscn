@@ -43,4 +43,4 @@ offset_right = 227.0
 offset_bottom = -111.0
 
 [node name="HatPickup" parent="." instance=ExtResource("8_06q4m")]
-position = Vector2(165, 67)
+position = Vector2(185, 65)
