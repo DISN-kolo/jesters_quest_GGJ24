@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://c2jqg8f4bierw"]
 
-[ext_resource type="Texture2D" uid="uid://dtbk3phclc3hu" path="res://Effects/EnemyDeathEffect.png" id="1_pso75"]
+[ext_resource type="Texture2D" uid="uid://bn0q74xpt4kgw" path="res://Effects/EnemyDeathEffect.png" id="1_pso75"]
 [ext_resource type="Script" path="res://Effects/effect.gd" id="2_armpb"]
-[ext_resource type="AudioStream" uid="uid://41juiw0f1ehi" path="res://Sounds/EnemyDie.wav" id="3_2apx5"]
+[ext_resource type="AudioStream" uid="uid://3o3smwfi4pki" path="res://Sounds/EnemyDie.wav" id="3_2apx5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4775v"]
 atlas = ExtResource("1_pso75")

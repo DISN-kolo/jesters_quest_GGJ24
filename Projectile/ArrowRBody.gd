@@ -4,9 +4,11 @@ var vel = Vector2(0, 1)
 @export var speed = 300.0
 var sprite = "res://Art Assets/ball_red.png"
 var pos_prev : Vector2
+var sample_pitch = 13.41
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$AudioStreamPlayer.pitch_scale = sample_pitch
 	$ArrowSprite.texture = load(sprite)
 
 
