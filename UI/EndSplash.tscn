@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://0368smb8j0u7"]
+
+[ext_resource type="Texture2D" uid="uid://c4ev42qasvfhu" path="res://UI/end_splash.png" id="1_drtdc"]
+[ext_resource type="Script" path="res://UI/EndSplash.gd" id="2_8blx3"]
+
+[node name="EndSplash" type="Sprite2D"]
+position = Vector2(960, 540)
+texture = ExtResource("1_drtdc")
+script = ExtResource("2_8blx3")
