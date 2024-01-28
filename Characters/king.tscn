@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmr7pi6lklyd0"]
+
+[ext_resource type="Texture2D" uid="uid://dysgi6o1thrfu" path="res://Art Assets/character sprite/Human King.png" id="1_ojui3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4g26"]
+atlas = ExtResource("1_ojui3")
+region = Rect2(0, 0, 43, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrry5"]
+atlas = ExtResource("1_ojui3")
+region = Rect2(43, 0, 43, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35asb"]
+atlas = ExtResource("1_ojui3")
+region = Rect2(86, 0, 43, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7edm3"]
+atlas = ExtResource("1_ojui3")
+region = Rect2(129, 0, 43, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yvuaw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4g26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrry5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35asb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7edm3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="King" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_yvuaw")
+autoplay = "default"
+frame_progress = 0.317509
