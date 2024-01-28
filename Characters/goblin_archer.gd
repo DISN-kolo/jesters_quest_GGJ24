@@ -25,10 +25,11 @@ func _physics_process(delta):
 		
 	if player:
 		sprite.play("shooting")
+		var target = player.global_position
+		var start = self.global_position
+		sprite.flip_h = target.x > start.x
 		if shoot_cd <= 0:
 			shoot_cd = SHOOT_CD
-			var target = player.global_position
-			var start = self.global_position
 			var enemy_arrow_instance = enemy_arrow.instantiate()
 			enemy_arrow_instance.global_position = start - Vector2(0, 10)
 			enemy_arrow_instance.rotation = (target - start).angle()
