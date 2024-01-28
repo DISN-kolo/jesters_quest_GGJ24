@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://ba86sjglgo2q6"]
 
 [ext_resource type="Script" path="res://UI/text_box.gd" id="1_0gejj"]
-[ext_resource type="Texture2D" uid="uid://cp01p8rprbj2k" path="res://Art Assets/Terrains and Deco/Treasure Hunters/Palm Tree Island/textBox.png" id="2_nmnwr"]
+[ext_resource type="Texture2D" uid="uid://s2kavaif7ymg" path="res://Art Assets/Terrains and Deco/Treasure Hunters/Palm Tree Island/textBox.png" id="2_nmnwr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_envps"]
 outline_size = 4
@@ -91,6 +91,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Text"
 label_settings = SubResource("LabelSettings_fww27")
+justification_flags = 161
 
 [node name="Indicator" type="Polygon2D" parent="ColorRect"]
 position = Vector2(359, 112)
