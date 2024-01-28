@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bgnbsw2467v3l"]
+[gd_scene load_steps=8 format=3 uid="uid://bgnbsw2467v3l"]
 
 [ext_resource type="TileSet" uid="uid://p6k7chtpc7xg" path="res://Levels/tileset2.tres" id="1_v0upk"]
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="2_3gpe2"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="3_faquu"]
 [ext_resource type="PackedScene" uid="uid://cuee5tlcivfip" path="res://UI/hearts.tscn" id="5_3ayip"]
 [ext_resource type="PackedScene" uid="uid://bbeflllxqelnn" path="res://Characters/goblin_archer.tscn" id="5_adxh3"]
-[ext_resource type="PackedScene" path="res://UI/pause_menu.tscn" id="6_s8v05"]
+[ext_resource type="PackedScene" uid="uid://b6tmly82k3jj4" path="res://UI/pause_menu.tscn" id="6_s8v05"]
+[ext_resource type="PackedScene" uid="uid://0rpdli2yg0ma" path="res://Objects/Killzone.tscn" id="7_grp3a"]
 
 [node name="Level3" type="Node2D"]
 
@@ -49,3 +50,6 @@ offset_left = 18.0
 offset_top = -102.0
 offset_right = 90.0
 offset_bottom = -2.0
+
+[node name="Killzone" parent="." instance=ExtResource("7_grp3a")]
+position = Vector2(22, 101)

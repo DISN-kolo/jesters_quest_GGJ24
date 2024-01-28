@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bgylhm6qepfxe"]
+[gd_scene load_steps=8 format=3 uid="uid://bgylhm6qepfxe"]
 
 [ext_resource type="PackedScene" uid="uid://tnn3emhw52bi" path="res://Characters/player.tscn" id="1_kciqf"]
 [ext_resource type="TileSet" uid="uid://bxt3w6ijwrnjc" path="res://Levels/tileset1.tres" id="2_dd0m7"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cuee5tlcivfip" path="res://UI/hearts.tscn" id="4_wff55"]
 [ext_resource type="PackedScene" path="res://UI/pause_menu.tscn" id="6_6a7cl"]
 [ext_resource type="PackedScene" uid="uid://bnrvurb504bau" path="res://Levels/next_level.tscn" id="6_wxixb"]
+[ext_resource type="PackedScene" uid="uid://0rpdli2yg0ma" path="res://Objects/Killzone.tscn" id="7_epe72"]
 
 [node name="Level1" type="Node2D"]
 position = Vector2(8, 2)
@@ -43,3 +44,6 @@ offset_left = -6.0
 offset_top = -86.0
 offset_right = 66.0
 offset_bottom = 14.0
+
+[node name="Killzone" parent="." instance=ExtResource("7_epe72")]
+position = Vector2(16, 110)

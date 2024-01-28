@@ -29,25 +29,7 @@ slide_on_ceiling = false
 zoom = Vector2(4, 4)
 
 [node name="Killzone" parent="." instance=ExtResource("4_5ky8g")]
-position = Vector2(-80, 123)
-
-[node name="Killzone2" parent="." instance=ExtResource("4_5ky8g")]
-position = Vector2(47, 124)
-
-[node name="Killzone3" parent="." instance=ExtResource("4_5ky8g")]
-position = Vector2(175, 124)
-
-[node name="Killzone4" parent="." instance=ExtResource("4_5ky8g")]
-position = Vector2(203, 124)
-
-[node name="Killzone5" parent="." instance=ExtResource("4_5ky8g")]
-position = Vector2(231, 124)
-
-[node name="Killzone6" parent="." instance=ExtResource("4_5ky8g")]
-position = Vector2(258, 124)
-
-[node name="Killzone7" parent="." instance=ExtResource("4_5ky8g")]
-position = Vector2(285, 124)
+position = Vector2(-79, 135)
 
 [node name="Goblin" parent="." instance=ExtResource("5_myyep")]
 position = Vector2(-80, -32)
